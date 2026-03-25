@@ -910,32 +910,37 @@
       .tg-decor { display: none; }
 
       /* FOOTER */
-      .footer-new { height: auto; overflow: hidden; }
+      .footer-new { height: auto; display: flex; flex-direction: column; align-items: stretch; overflow: visible; }
       /* Why CN: stacked vertically, Inter 24px title */
-      .why-cn-outer { position: relative; height: auto; padding: 32px 16px; }
-      .why-cn-inner { flex-direction: column; gap: 3px; align-items: center; text-align: center; }
+      .why-cn-outer { position: relative; height: auto; padding: 40px 16px; }
+      .why-cn-inner { flex-direction: column; gap: 16px; align-items: center; text-align: center; }
       .why-cn-title { width: auto; font-family: 'Inter', sans-serif; font-size: 24px; line-height: 34px; text-align: center; }
-      .why-cn-cards { flex-direction: column; gap: 3px; width: 100%; }
+      .why-cn-cards { flex-direction: column; gap: 16px; width: 100%; }
       .why-cn-card { flex: none; width: 100%; padding: 0; }
-      /* Easter illustration: full-bleed */
+      /* Easter wrap: positioned below Why CN */
+      .footer-easter-wrap { position: relative; width: 100%; height: 270px; flex-shrink: 0; overflow: hidden; }
+      /* Easter illustration fills the wrap */
       .footer-easter-bg {
-        position: relative;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 600px;
-        height: 220px;
+        position: absolute;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 270px;
         object-fit: cover;
         object-position: top;
       }
       /* Footer bar: column, gradient to top, social → links → copyright */
       .footer-bar {
-        position: relative;
-        bottom: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 125px;
+        justify-content: flex-end;
         padding: 40px 16px 10px;
         gap: 6px;
         background: linear-gradient(to top, #430d27, rgba(204, 204, 204, 0));
@@ -2383,17 +2388,17 @@
       <p class="why-cn-title">Why travellers choose CuddlyNest</p>
       <div class="why-cn-cards">
         <div class="why-cn-card">
-          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/198e7afb-b3c7-466a-a91a-e2f6848fe884" alt="" />
+          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/5aba01df-e0f0-4c30-94b0-6329b0829b05" alt="" />
           <p class="why-cn-card-title">Lower fees. Better value.</p>
           <p class="why-cn-card-sub">User-first pricing that saves you more.</p>
         </div>
         <div class="why-cn-card">
-          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/160f0b8d-df71-468f-a430-15721b2e1c45" alt="" />
+          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/65daa932-61de-44b8-ab1c-081c1052feec" alt="" />
           <p class="why-cn-card-title">AI finds the best rates.</p>
           <p class="why-cn-card-sub">Smart technology working for your wallet.</p>
         </div>
         <div class="why-cn-card">
-          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/48dcec13-560a-48d8-a57c-c6fe76208540" alt="" />
+          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/3a7cccb3-bfe8-4f28-87ab-0a1244efc9f8" alt="" />
           <p class="why-cn-card-title">Pay your way — even with crypto.</p>
           <p class="why-cn-card-sub">Avoid FX markups and extra bank fees.</p>
         </div>
@@ -2403,7 +2408,7 @@
 
   <!-- Easter wrap: illustration + footer bar (0px below Item-4) -->
   <div class="footer-easter-wrap">
-    <img class="footer-easter-bg" src="https://www.figma.com/api/mcp/asset/9a3b626e-3b6e-47fa-94ef-b156f5ce90e2" alt="" />
+    <img class="footer-easter-bg" src="https://www.figma.com/api/mcp/asset/5bc01531-cc81-43e1-beb2-ec86efdff038" alt="" />
     <div class="footer-bar">
       <div class="footer-links">
         <a href="#" class="footer-link">Privacy policy</a>
@@ -2414,13 +2419,13 @@
       </div>
       <span class="footer-copy">© 2025 CuddlyNest.</span>
       <div class="footer-social">
-        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/43178ca8-7d80-4b9a-82b8-deee55c533b3" alt="Instagram" />
-        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/02f36555-fcfe-472e-8c08-6b627037ff39" alt="YouTube" />
-        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/425b20bd-01c2-4fb4-b00b-c3bca686d5ea" alt="Facebook" />
-        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/346a3eb7-a4fe-4d32-b356-5da94187963f" alt="X" />
-        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/f00b5bf3-98ad-4a07-b93d-25f6eddba11b" alt="LinkedIn" />
-        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/83b9f0c6-4650-4e45-b0b4-2fdf72683783" alt="Pinterest" />
-        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/0ab9907c-f594-46be-8bac-93bc5783759f" alt="Medium" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/8be02891-2f4b-4951-86f4-f56eec98bb27" alt="Instagram" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/bbe8821c-f18f-4756-9fd1-624d8193c420" alt="YouTube" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/6a4a4d85-e26f-4da1-a8fb-3e2d04d1b28c" alt="Facebook" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/79d1d4b1-1768-4bef-8474-cd4cc888b097" alt="X" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/31cf4f6a-3fce-4d9a-a843-aac5aaf26722" alt="LinkedIn" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/89dd6ecf-6c45-42d1-9f95-ef7a89421938" alt="Pinterest" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/dd59be73-f762-4890-83f2-f280793d9f9d" alt="Medium" />
       </div>
     </div>
   </div>
