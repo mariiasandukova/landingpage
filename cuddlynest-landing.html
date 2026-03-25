@@ -1,0 +1,2900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CuddlyNest – Easter Big Sale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { overflow-x: hidden; }
+
+    :root {
+      --blue: #f189bb;
+      --pink: #ea529c;
+      --pink-dark: #e31c7c;
+      --dark: #19171c;
+      --dark-blue: #001329;
+      --gray: #7e7788;
+      --gray-light: #65606c;
+      --outline: #d9d6dc;
+      --surface: #ffffff;
+      --green-dark: #223935;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blue);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      z-index: 100;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+    .nav-logo { flex-shrink: 0; }
+    .nav-logo img { width: 162px; height: 35px; display: block; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      backdrop-filter: blur(5px);
+      background: rgba(10, 4, 24, 0.2);
+      border: none;
+      border-radius: 47px;
+      color: #fff;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.024px;
+      height: 40px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav-btn-list {
+      width: 146px;
+      padding: 0 20px;
+    }
+    .nav-btn-currency {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 0 16px;
+    }
+    .nav-btn-currency img { width: 18px; height: 18px; border-radius: 10px; flex-shrink: 0; }
+    .nav-btn-icon {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-btn-icon img { width: 20px; height: 20px; }
+    .nav-signin {
+      background: #fff;
+      color: #4c4851;
+      border: none;
+      border-radius: 47px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      height: 40px;
+      width: 81px;
+      letter-spacing: 0.024px;
+      flex-shrink: 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      width: 100%;
+    }
+    .hero picture {
+      display: block;
+      width: 100%;
+    }
+    .hero-bg {
+      display: block;
+      width: 100%;
+      height: 915px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ── ANCHOR NAV ── */
+    .anchor-nav {
+      background: var(--blue);
+      border-top: 1px solid rgba(255,255,255,0.2);
+      height: 51px;
+      display: flex;
+      align-items: flex-end;
+      padding-left: 60px;
+    }
+    .anchor-nav-tabs {
+      display: flex;
+      align-items: center;
+    }
+    .anchor-tab {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .anchor-tab span {
+      font-size: 14px;
+      line-height: 19px;
+      color: #fff;
+    }
+    .anchor-tab.active span {
+      font-weight: 600;
+      letter-spacing: 0.014px;
+    }
+    .anchor-tab:not(.active) {
+      opacity: 0.6;
+    }
+
+    /* ── SECTION COMMON ── */
+    .section {
+      position: relative;
+      padding: 60px 60px;
+      background: var(--blue);
+    }
+    .section-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTION HEADING ── */
+    .europe-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .europe-title-banner {
+      position: relative;
+      width: 415px;
+      height: 148px;
+      overflow: hidden;
+    }
+    .europe-title-img {
+      position: absolute;
+      width: 100%;
+      height: 114%;
+      top: -14%;
+      left: 0;
+      max-width: none;
+      display: block;
+    }
+    .europe-decor {
+      position: absolute;
+      display: block;
+      pointer-events: none;
+    }
+    .europe-decor-1 { left: 285px; top: 183px; width: 41px; height: 46px; }
+    .europe-decor-2 { left: 1286px; top: 172px; width: 82px; height: 81px; }
+
+    /* ── NORTH AMERICA ── */
+    .na-title-banner { position: relative; width: 415px; height: 144.56px; overflow: hidden; }
+    .na-title-img { position: absolute; width: 100%; height: 107.05%; top: -7.05%; left: 0; max-width: none; display: block; }
+    .na-decor { position: absolute; display: block; pointer-events: none; left: 1330px; top: 144px; width: 60px; height: 71px; }
+
+    /* ── SOUTHEAST ASIA ── */
+    .sea-title-banner { position: relative; width: 415px; height: 129.15px; overflow: hidden; }
+    .sea-title-img { position: absolute; width: 100%; height: 104.95%; top: -4.95%; left: 0; max-width: none; display: block; }
+    .sea-decor { position: absolute; display: block; pointer-events: none; left: 1330px; top: 81px; width: 57px; height: 64px; }
+
+    /* ── EAST (MIDDLE EAST) ── */
+    .east-title-banner { position: relative; width: 415px; height: 139.37px; overflow: hidden; }
+    .east-title-img { position: absolute; width: 103.23%; height: 109.1%; top: -9.27%; left: 0; max-width: none; display: block; }
+    .east-decor { position: absolute; display: block; pointer-events: none; left: 13px; top: 217px; width: 57px; height: 64px; }
+
+    /* ── DEAL CARDS ── */
+    .deals-section {
+      padding: 109px 60px 60px;
+    }
+    .deals-section-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    /* Speech bubble title */
+    .deals-title-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .deals-title-bubble {
+      display: block;
+      width: 488px;
+      height: 152px;
+      transform: scaleY(-1) rotate(180deg);
+    }
+    .deals-title-text {
+      position: absolute;
+      top: 61px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 45px;
+      color: #e95fa2;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .deals-cards-row {
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+    }
+    /* All 3 deal cards – uniform 293×372 */
+    .deal-card {
+      position: relative;
+      width: 293px;
+      height: 372px;
+      flex-shrink: 0;
+    }
+    .deal-card-egg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .deal-card-content {
+      position: absolute;
+      left: 3.77px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 286px;
+      height: 238px;
+    }
+    .deal-card-info {
+      position: absolute;
+      left: 0;
+      top: 25px;
+      width: 286px;
+      height: 224px;
+      padding: 0 27px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .deal-card-top {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+      width: 100%;
+      padding: 8.758px 13.137px 13.137px;
+    }
+    .deal-card-top--narrow .deal-card-desc { width: 191px; margin: 0 auto; }
+    .deal-card-desc {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      color: var(--dark-blue);
+    }
+    .deal-card-promo {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--gray);
+    }
+    .deal-card-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 13px;
+      width: 140px;
+    }
+    .deal-card-discount {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 34px;
+      color: var(--pink-dark);
+      white-space: nowrap;
+    }
+    .deal-copy-btn {
+      background: var(--dark);
+      color: #fff;
+      border: none;
+      border-radius: 99px;
+      width: 100%;
+      height: 43.79px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13.14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .deals-footnote {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 19px;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .deals-footnote-dates {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+    }
+    .deals-footnote-row {
+      display: flex;
+      gap: 4px;
+      align-items: flex-start;
+    }
+    .deals-footnote-row strong { font-weight: 600; letter-spacing: 0.014px; }
+
+    /* ── CITY/TYPE TABS ── */
+    .tabs-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 0;
+      justify-content: center;
+    }
+    .tab-pill {
+      padding: 10px 16px;
+      height: 40px;
+      border-radius: 20px;
+      font-size: 14px;
+      line-height: 19px;
+      cursor: pointer;
+      white-space: nowrap;
+      border: none;
+    }
+    .tab-pill.active {
+      background: #fcfcfd;
+      color: var(--green-dark);
+      font-weight: 600;
+      letter-spacing: 0.014px;
+    }
+    .tab-pill.inactive {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    .tab-underline-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 0;
+    }
+    .tab-underline {
+      padding: 10px 16px;
+      height: 40px;
+      font-size: 14px;
+      line-height: 19px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: #fff;
+    }
+    .tab-underline.active {
+      font-weight: 600;
+      border-bottom: 2px solid #fff;
+      letter-spacing: 0.014px;
+    }
+    .tab-underline.inactive { opacity: 0.8; }
+
+    /* ── HOTEL CARDS GRID ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 318px);
+      gap: 16px;
+    }
+    .hotel-card {
+      border: 1px solid var(--outline);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      width: 318px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .hotel-card-img {
+      width: 100%;
+      height: 182px;
+      object-fit: cover;
+      display: block;
+    }
+    .hotel-card-body {
+      background: #fff;
+      border-top: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px;
+    }
+    .hotel-card-tags {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .badge-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-rating-score {
+      background: var(--green-dark);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      padding: 3px 8px;
+      border-radius: 8px;
+    }
+    .badge-rating-label {
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--gray-light);
+    }
+    .badge-type {
+      border: 1px solid #e5e4e7;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      font-size: 12px;
+      color: var(--gray-light);
+    }
+    .badge-type-stars { display: flex; gap: 1px; }
+    .badge-type-stars img { width: 12px; height: 12px; }
+    .hotel-card-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .hotel-card-name {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: var(--dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .hotel-card-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--gray-light);
+    }
+    .hotel-card-location img { width: 16px; height: 16px; }
+    .hotel-card-pricing {
+      border-top: 1px solid #e5e4e7;
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hotel-card-pricing-label {
+      font-size: 12px;
+      line-height: 16px;
+      color: #6b6267;
+    }
+    .hotel-card-price {
+      font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--pink-dark);
+      letter-spacing: 0.016px;
+    }
+
+    /* ── FLIGHT TICKET CARDS ── */
+    .flights-grid {
+      display: none;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .flights-grid.visible { display: flex; }
+    .flight-card {
+      position: relative;
+      width: 318px;
+      height: 197px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 8px 0 rgba(33,12,78,0.09);
+    }
+    .flight-card-bg {
+      position: absolute;
+      top: 1px; left: 1px;
+      width: 318px; height: 195px;
+      overflow: hidden;
+    }
+    .flight-card-bg img {
+      position: absolute;
+      display: block;
+      top: -0.26%; left: -0.16%;
+      width: 100.32%; height: 100.52%;
+      max-width: none;
+    }
+    .flight-card-body {
+      position: absolute;
+      top: 1px; left: 1px;
+      width: 318px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 12px;
+    }
+    .flight-card-route {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: #001329;
+      padding: 12px 12px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .flight-card-meta,
+    .flight-card-airline {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 19px;
+      color: #65606c;
+      white-space: nowrap;
+    }
+    .flight-sep { font-size: 12px; line-height: 16px; }
+    .flight-airline-icon { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
+    .flight-card-price-row {
+      position: absolute;
+      bottom: 1px; left: 1px;
+      width: 318px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      padding: 12px;
+    }
+    .flight-from { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 19px; color: #65606c; }
+    .flight-price { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; line-height: 25px; color: #e31c7c; }
+
+    /* ── SECTION DIVIDERS ── */
+    .section-blue { background: var(--blue); }
+
+    /* ── TRAVEL GUIDE ── */
+    .travel-guide { position: relative; padding: 60px 0; background: var(--blue); }
+    .travel-guide-inner { width: 100%; display: flex; flex-direction: column; gap: 32px; align-items: center; }
+    .tg-title-row { display: flex; gap: 16px; align-items: center; justify-content: center; }
+    .tg-flower { width: 52px; height: 58px; display: block; }
+    .tg-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 32px; line-height: 45px; color: #fff; text-align: center; white-space: nowrap; }
+    .tg-subtitle { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; line-height: 22px; color: #f7f7f8; text-align: center; max-width: 700px; }
+    .tg-tabs { display: flex; gap: 8px; align-items: center; padding: 8px 0; }
+    .tg-tab { height: 40px; padding: 10px 16px; border-radius: 20px; font-size: 14px; line-height: 19px; cursor: pointer; }
+    .tg-tab.active { background: #fff; color: var(--dark); font-family: 'Poppins', sans-serif; font-weight: 600; border: none; }
+    .tg-tab.inactive { background: transparent; border: 0.5px solid #d9d6dc; color: #fff; font-family: 'Inter', sans-serif; font-weight: 400; }
+    .tg-cards { display: flex; gap: 16px; align-items: flex-start; width: 100%; padding: 0 24px; }
+    .article-card { display: flex; flex-direction: column; gap: 15px; width: 318px; flex-shrink: 0; }
+    .article-card-img { width: 100%; height: 158px; object-fit: cover; border-radius: 12px; display: block; border: 0.8px solid rgba(0,0,0,0.08); }
+    .article-card-meta { display: flex; align-items: center; justify-content: space-between; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #f7f7f8; }
+    .article-card-title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; line-height: 22px; color: #fff; letter-spacing: 0.016px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; height: 44px; }
+    .article-card-cta { display: flex; align-items: center; gap: 4px; padding: 10px 0 0; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; line-height: 19px; color: #fcfbfe; cursor: pointer; background: none; border: none; }
+    .article-card-cta img { width: 20px; height: 20px; }
+    .tg-decor { position: absolute; right: 42px; bottom: 60px; width: 78px; height: 102px; transform: rotate(-29.61deg); pointer-events: none; display: block; }
+
+    /* ── FOOTER ── */
+    .footer-new { position: relative; width: 100%; height: 648px; background: var(--blue); overflow: hidden; }
+    .footer-easter-wrap { position: absolute; inset: 0; overflow: hidden; }
+    .footer-easter-bg { position: absolute; top: 143px; left: 0; width: 100%; height: 505px; object-fit: cover; object-position: top; display: block; }
+    /* Desktop: title left, cards row right */
+    .why-cn-outer { position: absolute; top: 0; left: 0; right: 0; height: 173px; display: flex; align-items: center; padding: 40px 60px; }
+    .why-cn-inner { max-width: 1320px; width: 100%; margin: 0 auto; display: flex; flex-direction: row; align-items: center; gap: 3px; }
+    .why-cn-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 32px; line-height: 45px; color: #fff; width: 329px; flex-shrink: 0; }
+    .why-cn-cards { display: flex; flex-direction: row; flex: 1; gap: 3px; align-items: center; }
+    .why-cn-card { display: flex; flex-direction: column; gap: 8px; align-items: center; flex: 1; text-align: center; padding: 0 16px; }
+    .why-cn-card-icon { width: 32px; height: 32px; display: block; }
+    .why-cn-card-title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 18px; line-height: 25px; color: #fff; }
+    .why-cn-card-sub { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #e5e4e7; }
+    .footer-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 63px; display: flex; align-items: center; padding: 0 60px; gap: 6px; background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 0%, hsla(331, 82%, 24%, 0.7) 100%); }
+    .footer-links { position: relative; display: flex; align-items: center; gap: 6px; flex: 1; }
+    .footer-link { font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 12px; line-height: 16px; color: #fff; text-decoration: none; white-space: nowrap; }
+    .footer-link:hover { text-decoration: underline; }
+    .footer-sep { color: rgba(255,255,255,0.5); font-size: 12px; }
+    .footer-copy { position: relative; font-family: 'Lato', sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #fff; letter-spacing: 0.56px; white-space: nowrap; }
+    .footer-social { position: relative; display: flex; gap: 12px; align-items: center; justify-content: flex-end; flex: 1; }
+    .footer-social-icon { width: 32px; height: 32px; display: block; flex-shrink: 0; }
+
+    /* ── HAMBURGER (hidden on desktop) ── */
+    .nav-hamburger {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      flex-shrink: 0;
+    }
+    .nav-hamburger img { width: 24px; height: 24px; display: block; }
+
+    /* ══════════════════════════════════
+       RESPONSIVE — TABLET (≤1024px)
+    ══════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .hotel-card { width: 100%; }
+      .deals-cards-row { gap: 0; }
+    }
+
+    /* ══════════════════════════════════
+       RESPONSIVE — MOBILE (≤768px)
+    ══════════════════════════════════ */
+    @media (min-width: 769px) and (max-width: 1024px) {
+
+      /* ── HERO: 24px gap below ── */
+      .hero { margin-bottom: 24px; }
+
+      /* ── NAV: absolute overlay on hero ── */
+      .nav { position: absolute; top: 0; left: 0; right: 0; padding: 24px 24px 16px; height: auto; background: none; box-shadow: none; border-radius: 0 0 32px 32px; }
+      .nav-inner { max-width: none; }
+      .nav-logo img { width: 162px; height: 35px; }
+      .nav-right { display: none; }
+      .nav-hamburger { display: flex; width: 48px; height: 48px; padding: 8px; }
+
+      /* ── HERO image: fill width, maintain aspect ratio ── */
+      .hero-bg { width: 100%; height: auto; aspect-ratio: 4096 / 2318; object-fit: cover; }
+
+      /* ── SECTIONS: 24px margins, fill width, clip off-screen decor ── */
+      .section { padding: 60px 24px; overflow: hidden; }
+      .section-inner { max-width: 100%; }
+      .deals-section { padding: 60px 24px; overflow: hidden; }
+      .deals-section-inner { max-width: 100%; }
+
+      /* ── DEAL EGG CARDS: 230px ── */
+      .deals-cards-row { gap: 0; }
+      .deal-card { width: 230.47px; height: 292.6px; }
+      .deal-card-content { width: 224.97px; height: 187px; left: 2.75px; top: 53px; transform: none; }
+      .deal-card-info { width: 224.97px; top: 20px; height: auto; padding: 0 21px; }
+      .deal-card-desc { font-size: 15.73px; line-height: 22px; }
+      .deal-card-promo { font-size: 11px; line-height: 15px; }
+      .deal-card-discount { font-size: 18.88px; line-height: 26px; }
+      .deal-card-bottom { width: 110px; }
+      .deal-copy-btn { height: 34px; font-size: 10.33px; }
+
+      /* ── HOTEL CARDS: 2 per row at 314px, 16px gap, centered ── */
+      .cards-grid { grid-template-columns: repeat(2, 314px); gap: 16px; justify-content: center; }
+      .hotel-card { width: 314px; }
+
+      /* ── FLIGHT CARDS: 2 per row at 314px, centered ── */
+      .flights-grid { justify-content: center; }
+      .flight-card { width: 314px; }
+      .flight-card-bg { width: 314px; }
+      .flight-card-body { width: 314px; }
+      .flight-card-price-row { width: 314px; }
+
+      /* ── ANCHOR NAV: scrollable, 16px font ── */
+      .anchor-nav { padding-left: 0; border-top: none; overflow-x: auto; scrollbar-width: none; align-items: flex-end; }
+      .anchor-nav::-webkit-scrollbar { display: none; }
+      .anchor-nav-tabs { gap: 0; align-items: flex-end; height: 50px; }
+      .anchor-tab span { font-size: 16px; line-height: 22px; }
+
+      /* ── TRAVEL GUIDE: fill width ── */
+      .travel-guide { padding: 60px 0; overflow: hidden; }
+      .travel-guide-inner { max-width: 100%; }
+      .tg-cards { overflow-x: auto; flex-wrap: nowrap; padding: 0 24px 12px; scrollbar-width: none; justify-content: flex-start; }
+      .tg-cards::-webkit-scrollbar { display: none; }
+      .article-card { flex: 0 0 314px; width: 314px; }
+      .tg-decor { display: none; }
+
+      /* ── FOOTER ── */
+      .footer-new { height: auto; display: flex; flex-direction: column; align-items: stretch; }
+      .why-cn-outer { position: relative; height: auto; padding: 40px 24px 0; }
+      .footer-easter-wrap { position: relative; width: 100%; height: 270px; flex-shrink: 0; overflow: hidden; }
+      .footer-easter-bg { position: absolute; bottom: 0; top: auto; left: 0; transform: none; width: 100%; height: 270px; object-fit: cover; object-position: top; }
+      .footer-bar {
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        transform: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 40px 16px 10px;
+        height: auto;
+        gap: 8px;
+        background: linear-gradient(to top, #430d27, rgba(204,204,204,0));
+      }
+      .footer-social { order: -2; flex: none; justify-content: center; width: 100%; }
+      .footer-links { order: -1; flex: none; justify-content: center; width: 100%; }
+      .footer-copy { order: 0; }
+
+      /* ── WHY CN: stacked vertically at iPad ── */
+      .why-cn-inner { flex-direction: column; gap: 3px; align-items: center; justify-content: center; }
+      .why-cn-title { width: auto; font-family: 'Inter', sans-serif; line-height: 42px; text-align: center; margin-bottom: 3px; }
+      .why-cn-cards { flex: none; flex-direction: column; gap: 3px; width: 100%; }
+      .why-cn-card { flex: none; width: 100%; padding: 0; }
+    }
+
+    @media (max-width: 768px) {
+
+      /* NAV */
+      .nav { padding: 10px 16px; height: auto; border-radius: 0 0 32px 32px; }
+      .nav-logo img { width: 43px; height: 26px; object-fit: contain; }
+      .nav-right { display: none; }
+      .nav-hamburger { display: flex; }
+
+      /* HERO */
+      .hero-bg { height: auto; object-fit: unset; }
+
+      /* ANCHOR NAV */
+      .anchor-nav { height: 50px; padding: 0; border-top: none; overflow-x: auto; scrollbar-width: none; align-items: flex-end; }
+      .anchor-nav::-webkit-scrollbar { display: none; }
+      .anchor-nav-tabs { gap: 0; align-items: flex-end; height: 50px; }
+      .anchor-tab { padding: 0 16px; height: 50px; align-items: flex-end; padding-bottom: 0; gap: 0; flex-direction: column; justify-content: flex-end; }
+      .anchor-tab span { font-size: 14px; padding-bottom: 16px; display: block; }
+      .anchor-tab.active { border-bottom: 2px solid #fff; }
+      .anchor-tab.active span { font-weight: 600; }
+      .anchor-tab:not(.active) { opacity: 0.7; border-bottom: none; }
+
+      /* SECTION 1 – EGG DEALS */
+      .deals-section { padding: 40px 16px 40px; }
+      .deals-section-inner { gap: 24px; }
+      .deals-title-bubble { width: 351px; height: 109px; transform: scaleY(-1) rotate(180deg); }
+      .deals-title-text { font-size: 24px; line-height: 34px; top: 42px; }
+      .deal-card-discount { font-size: 18px; line-height: 25px; }
+      .deals-cards-row { flex-direction: column; align-items: center; gap: 24px; }
+      .deal-card { width: 293px; height: 372px; }
+
+      /* REGION SECTIONS */
+      .section { padding: 32px 16px; overflow: hidden; }
+      .section-inner { max-width: 100%; }
+      .europe-heading { gap: 12px; }
+      .europe-title-banner,
+      .na-title-banner,
+      .sea-title-banner,
+      .east-title-banner { width: 260px; height: auto; }
+      .europe-title-img,
+      .na-title-img,
+      .sea-title-img,
+      .east-title-img { position: relative; width: 100%; height: auto; top: 0; }
+      .tabs-row {
+        overflow-x: auto;
+        justify-content: flex-start;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+        flex-wrap: nowrap;
+      }
+      .tabs-row::-webkit-scrollbar { display: none; }
+      .tab-pill { flex-shrink: 0; }
+      .tab-underline-row { gap: 16px; }
+
+      /* HOTEL CARDS — horizontal layout on mobile */
+      .cards-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .hotel-card {
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        border-radius: 12px;
+      }
+      .hotel-card-img {
+        width: 110px;
+        min-width: 110px;
+        height: 100%;
+        border-radius: 0;
+        border-right: 1px solid var(--outline);
+      }
+      .hotel-card-body {
+        flex: 1;
+        padding: 8px 10px;
+        gap: 4px;
+        justify-content: space-between;
+      }
+      .hotel-card-name { font-size: 13px; line-height: 18px; }
+      .hotel-card-pricing { padding-top: 4px; border-top: 1px solid #e5e4e7; }
+      .hotel-card-price { font-size: 14px; }
+
+      /* Hide decorative elements on mobile */
+      .europe-decor,
+      .na-decor,
+      .sea-decor,
+      .east-decor { display: none; }
+
+      /* TRAVEL GUIDE */
+      .travel-guide { padding: 32px 0; }
+      .tg-title { font-size: 22px; line-height: 30px; white-space: normal; }
+      .tg-cards {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 0 24px 12px;
+        scrollbar-width: none;
+        gap: 12px;
+        justify-content: flex-start;
+      }
+      .tg-cards::-webkit-scrollbar { display: none; }
+      .article-card { width: 260px; flex-shrink: 0; }
+      .tg-decor { display: none; }
+
+      /* FOOTER */
+      .footer-new { height: auto; overflow: hidden; }
+      /* Why CN: stacked vertically, Inter 24px title */
+      .why-cn-outer { position: relative; height: auto; padding: 32px 16px; }
+      .why-cn-inner { flex-direction: column; gap: 3px; align-items: center; text-align: center; }
+      .why-cn-title { width: auto; font-family: 'Inter', sans-serif; font-size: 24px; line-height: 34px; text-align: center; }
+      .why-cn-cards { flex-direction: column; gap: 3px; width: 100%; }
+      .why-cn-card { flex: none; width: 100%; padding: 0; }
+      /* Easter illustration: full-bleed */
+      .footer-easter-bg {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 220px;
+        object-fit: cover;
+        object-position: top;
+      }
+      /* Footer bar: column, gradient to top, social → links → copyright */
+      .footer-bar {
+        position: relative;
+        bottom: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 125px;
+        padding: 40px 16px 10px;
+        gap: 6px;
+        background: linear-gradient(to top, #430d27, rgba(204, 204, 204, 0));
+      }
+      .footer-social { order: -2; flex: none; justify-content: center; width: 100%; }
+      .footer-links { order: -1; flex: none; justify-content: center; width: 100%; }
+      .footer-copy { order: 0; text-align: center; }
+      .footer-social-icon { width: 32px; height: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <picture>
+    <source media="(min-width: 769px) and (max-width: 1024px)" srcset="https://www.figma.com/api/mcp/asset/87507f28-edb6-41f0-89e9-1ef0ee517a20" />
+    <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/9ef8002b-2852-43ee-91cf-55270e1a8514" />
+    <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/03d9c90b-e59a-49d1-a536-735729290d11" alt="Easter Big Sale" />
+  </picture>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <picture>
+          <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/934fd5d4-e860-44cb-b05f-876e14fb3708" />
+          <img src="https://www.figma.com/api/mcp/asset/89fbbe22-f279-4eac-9581-d52e9c57e4d1" alt="CuddlyNest" />
+        </picture>
+      </div>
+      <div class="nav-right">
+        <button class="nav-btn nav-btn-list">List your property</button>
+        <button class="nav-btn nav-btn-currency">
+          <img src="https://www.figma.com/api/mcp/asset/266e22ff-2c33-4663-9ae8-e6c707e13bd5" alt="USD" />
+          <span>USD</span>
+        </button>
+        <button class="nav-btn nav-btn-icon">
+          <img src="https://www.figma.com/api/mcp/asset/678732d6-1564-48b7-b3c3-ab5c4b444264" alt="Language" />
+        </button>
+        <button class="nav-signin">Sign in</button>
+      </div>
+      <button class="nav-hamburger" aria-label="Menu">
+        <img src="https://www.figma.com/api/mcp/asset/4def640d-37fd-4979-91d1-050592ebede2" alt="" />
+      </button>
+    </div>
+  </nav>
+</section>
+
+<!-- ══ ANCHOR NAVIGATION ══ -->
+<nav class="anchor-nav">
+  <div class="anchor-nav-tabs">
+    <div class="anchor-tab active"><span>Easter Egg Hunt Deals</span></div>
+    <div class="anchor-tab"><span>Europe</span></div>
+    <div class="anchor-tab"><span>North America</span></div>
+    <div class="anchor-tab"><span>Southeast Asia</span></div>
+    <div class="anchor-tab"><span>Middle East</span></div>
+    <div class="anchor-tab"><span>Easter Destinations &amp; Travel Inspiration 🐣</span></div>
+  </div>
+</nav>
+
+<!-- ══ EASTER EGG HUNT DEALS ══ -->
+<section class="deals-section" id="exclusive-eid-deals">
+  <div class="deals-section-inner">
+
+    <!-- Speech bubble title -->
+    <div class="deals-title-wrap">
+      <picture>
+        <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/ad13ac0c-7c0b-452d-8fdb-666c9de99619" />
+        <img class="deals-title-bubble" src="https://www.figma.com/api/mcp/asset/ad13ac0c-7c0b-452d-8fdb-666c9de99619" alt="" />
+      </picture>
+      <span class="deals-title-text">Easter Egg Hunt Deals</span>
+    </div>
+
+    <div class="deals-cards-row">
+
+      <!-- Card 1 – Stays (293×372) -->
+      <div class="deal-card">
+        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/b48fc9a9-10b5-4e13-a9bf-af1178ce1fb1" alt="" />
+        <div class="deal-card-content">
+          <div class="deal-card-info">
+            <div class="deal-card-top">
+              <p class="deal-card-desc">Crack the egg,<br>hunt Easter hotel savings</p>
+              <p class="deal-card-promo">Promo code: EASTERSTAYS25</p>
+            </div>
+            <div class="deal-card-bottom">
+              <span class="deal-card-discount">25% off</span>
+              <button class="deal-copy-btn">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 – Early Bird (293×372) -->
+      <div class="deal-card">
+        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/63504412-2d46-48e8-9856-2d69b5bc799d" alt="" />
+        <div class="deal-card-content">
+          <div class="deal-card-info">
+            <div class="deal-card-top">
+              <p class="deal-card-desc">Early eggs unlock bigger Easter rewards</p>
+              <p class="deal-card-promo">Promo code: EASTEREARLY30</p>
+            </div>
+            <div class="deal-card-bottom">
+              <span class="deal-card-discount">30% off</span>
+              <button class="deal-copy-btn">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 – Crypto (293×372) -->
+      <div class="deal-card">
+        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/0fa1efc7-746e-4b37-8e5f-f18c0874b1c1" alt="" />
+        <div class="deal-card-content">
+          <div class="deal-card-info">
+            <div class="deal-card-top deal-card-top--narrow">
+              <p class="deal-card-desc">Hunt the hidden egg, find crypto savings</p>
+              <p class="deal-card-promo" style="white-space:nowrap;">Promo code: EASTERCRYPTO35</p>
+            </div>
+            <div class="deal-card-bottom">
+              <span class="deal-card-discount">$35 off</span>
+              <button class="deal-copy-btn">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="deals-footnote">
+      <p>*Limited to 1 redemption per user.</p>
+      <div class="deals-footnote-dates">
+        <div class="deals-footnote-row">
+          <p><strong>Start</strong>:</p>
+          <p>Monday, March 25, 2026 – 00:00 UTC</p>
+        </div>
+        <div class="deals-footnote-row">
+          <p><strong>End</strong>:</p>
+          <p>Monday, April 6, 2026 – 23:59 UTC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EUROPE SECTION ══ -->
+<section class="section" id="europe">
+  <!-- Decorative elements -->
+  <img class="europe-decor europe-decor-1" src="https://www.figma.com/api/mcp/asset/b62fea6a-616d-42ff-b2a7-8d5fe53441b5" alt="" />
+  <img class="europe-decor europe-decor-2" src="https://www.figma.com/api/mcp/asset/66f90c83-6042-4696-8ed8-a055f82d2342" alt="" />
+  <div class="section-inner">
+
+    <!-- Europe heading -->
+    <div class="europe-heading">
+      <div class="europe-title-banner">
+        <img class="europe-title-img" src="https://www.figma.com/api/mcp/asset/538428f9-19d4-4c1d-8a9c-fba5503a4393" alt="Europe" />
+      </div>
+      <div class="tabs-row">
+        <button class="tab-pill active">Rome</button>
+        <button class="tab-pill inactive">Seville</button>
+        <button class="tab-pill inactive">Vienna</button>
+        <button class="tab-pill inactive">Prague</button>
+        <button class="tab-pill inactive">Florence</button>
+      </div>
+      <div class="tab-underline-row">
+        <button class="tab-underline active">Stays</button>
+        <button class="tab-underline inactive">Flights</button>
+      </div>
+    </div>
+
+    <!-- Hotel cards -->
+    <div class="cards-grid">
+      <!-- Card template × 8 -->
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.2</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">
+              Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Residence Inn by Marriott New York Manhattan</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Osaka, Japan</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">280 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.2</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">
+              Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Grand Hotel Roma</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Rome, Italy</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">220 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">8.1</span>
+              <span class="badge-rating-label">Excellent</span>
+            </div>
+            <div class="badge-type">
+              Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Hotel Colosseo Roma</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Rome, Italy</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">195 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.8</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">
+              Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Arthotel ANA International</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Vienna, Austria</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">310 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">6.9</span>
+              <span class="badge-rating-label">Okay</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Trevi Fountain Suites</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Rome, Italy</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">160 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">8.5</span>
+              <span class="badge-rating-label">Excellent</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Marriott Florence Piazza della Signoria</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Florence, Italy</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">450 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.5</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Seville Luxury Boutique Hotel</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Seville, Spain</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">175 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/c6040e5a-2a45-4ba8-b699-4531e7ff5d0b" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">8.0</span>
+              <span class="badge-rating-label">Very Good</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/56e79e82-8239-4b4a-a40a-e37724284a65" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Prague Old Town Residence</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/74b8d1c3-cc34-4849-9fe0-45d67c390d58" alt="" />
+              <span>Prague, Czech Republic</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">240 USDT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flight ticket cards (Flights tab) -->
+    <div class="flights-grid">
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>London (LHR)</span><span>-</span><span>Paris (CDG)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17, 2026 – Apr 19, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Air France</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">£89</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Paris (CDG)</span><span>-</span><span>Amsterdam (AMS)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 18, 2026 – Apr 20, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>KLM</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">€95</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Rome (FCO)</span><span>-</span><span>Barcelona (BCN)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17, 2026 – Apr 20, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Vueling</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">€112</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Amsterdam (AMS)</span><span>-</span><span>London (LHR)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 19, 2026 – Apr 21, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>British Airways</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">£78</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Barcelona (BCN)</span><span>-</span><span>Rome (FCO)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 20, 2026 – Apr 23, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Iberia</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">€134</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>London (LHR)</span><span>-</span><span>Amsterdam (AMS)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 18, 2026 – Apr 21, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>KLM</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">£95</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Paris (CDG)</span><span>-</span><span>Rome (FCO)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17, 2026 – Apr 22, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Air France</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">€145</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Florence (FLR)</span><span>-</span><span>Paris (CDG)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 20, 2026 – Apr 24, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Air France</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">€167</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NORTH AMERICA ══ -->
+<section class="section" id="north-america">
+  <img class="na-decor" src="https://www.figma.com/api/mcp/asset/c421bd14-c6be-49af-9bbc-d3d87f30577f" alt="" />
+  <div class="section-inner">
+
+    <div class="europe-heading">
+      <div class="na-title-banner">
+        <img class="na-title-img" src="https://www.figma.com/api/mcp/asset/bec726b9-4139-49f1-8137-b10efefe76d0" alt="North America" />
+      </div>
+      <div class="tabs-row">
+        <button class="tab-pill active">New York</button>
+        <button class="tab-pill inactive">Boston</button>
+        <button class="tab-pill inactive">New Orleans</button>
+        <button class="tab-pill inactive">Toronto</button>
+        <button class="tab-pill inactive">Vancouver</button>
+      </div>
+      <div class="tab-underline-row">
+        <button class="tab-underline active">Stays</button>
+        <button class="tab-underline inactive">Flights</button>
+      </div>
+    </div>
+
+    <!-- Hotel cards (Stays tab) -->
+    <div class="cards-grid">
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.2</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Residence Inn by Marriott New York Manhattan/Times Square</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>New York, USA</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">280 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">8.3</span>
+              <span class="badge-rating-label">Excellent</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">The Watergate Hotel</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>Washington DC, USA</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">340 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.8</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Ace Hotel New Orleans</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>New Orleans, USA</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">195 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">8.6</span>
+              <span class="badge-rating-label">Excellent</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Fairmont Royal York</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>Toronto, Canada</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">390 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.5</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Rosewood Hotel Georgia</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>Vancouver, Canada</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">310 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">6.9</span>
+              <span class="badge-rating-label">Okay</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Hotel Monteleone</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>New Orleans, USA</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">165 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">8.1</span>
+              <span class="badge-rating-label">Excellent</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">The Hay-Adams</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>Washington DC, USA</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">420 USDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/f65e34dd-8ee2-49d3-8386-1a15de2c14ef" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating">
+              <span class="badge-rating-score">7.9</span>
+              <span class="badge-rating-label">Good</span>
+            </div>
+            <div class="badge-type">Hotel
+              <div class="badge-type-stars">
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+                <img src="https://www.figma.com/api/mcp/asset/92b49653-9308-4282-9ddd-851b6de84bc9" alt="★" />
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Shangri-La Vancouver</p>
+            <div class="hotel-card-location">
+              <img src="https://www.figma.com/api/mcp/asset/bd4b04f0-350d-4c56-8398-144c94100f5c" alt="" />
+              <span>Vancouver, Canada</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
+            <span class="hotel-card-price">355 USDT</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Flight ticket cards (Flights tab) -->
+    <div class="flights-grid">
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>New York (EWR)</span><span>-</span><span>Vancouver (YVR)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17, 2026 – Apr 19, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Indigo airline</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$328</span></div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Washington DC (DCA)</span><span>-</span><span>New York (JFK)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17, 2026 – Apr 19, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Delta Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$189</span></div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>New Orleans (MSY)</span><span>-</span><span>Toronto (YYZ)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 18, 2026 – Apr 21, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>United Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$245</span></div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Toronto (YYZ)</span><span>-</span><span>Vancouver (YVR)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 20, 2026 – Apr 23, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Air Canada</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$267</span></div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Washington DC (DCA)</span><span>-</span><span>Vancouver (YVR)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17, 2026 – Apr 22, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Alaska Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$412</span></div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>New York (JFK)</span><span>-</span><span>New Orleans (MSY)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 18, 2026 – Apr 20, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Delta Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$198</span></div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Toronto (YYZ)</span><span>-</span><span>New York (JFK)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 19, 2026 – Apr 21, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Air Canada</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$234</span></div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>Vancouver (YVR)</span><span>-</span><span>Washington DC (DCA)</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 20, 2026 – Apr 24, 2026</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Delta Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$389</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOUTHEAST ASIA ══ -->
+<section class="section" id="southeast-asia">
+  <img class="sea-decor" src="https://www.figma.com/api/mcp/asset/d0c26da3-1d45-488c-8384-541140de474e" alt="" />
+  <div class="section-inner">
+
+    <div class="europe-heading">
+      <div class="sea-title-banner">
+        <img class="sea-title-img" src="https://www.figma.com/api/mcp/asset/51844ce0-e575-4752-8569-b2730a0c6692" alt="Southeast Asia" />
+      </div>
+      <div class="tabs-row">
+        <button class="tab-pill active">Manila</button>
+        <button class="tab-pill inactive">Cebu City</button>
+        <button class="tab-pill inactive">Singapore</button>
+        <button class="tab-pill inactive">Bali</button>
+        <button class="tab-pill inactive">Phuket</button>
+      </div>
+      <div class="tab-underline-row">
+        <button class="tab-underline active">Stays</button>
+        <button class="tab-underline inactive">Flights</button>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.1</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Marriott Manila</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Manila, Philippines</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">210 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">7.6</span><span class="badge-rating-label">Good</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Radisson Blu Cebu</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Cebu City, Philippines</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">145 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">9.0</span><span class="badge-rating-label">Superb</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Marina Bay Sands</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Singapore</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">520 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.7</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Four Seasons Resort Bali at Sayan</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Bali, Indonesia</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">480 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.3</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Trisara Phuket</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Phuket, Thailand</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">370 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">7.4</span><span class="badge-rating-label">Good</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">The Peninsula Manila</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Manila, Philippines</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">255 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.8</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Capella Singapore</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Singapore</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">610 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/94f4e95c-f67e-4064-905e-419dac16106c" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">7.9</span><span class="badge-rating-label">Good</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/8ef8013c-3ef9-4036-a106-b475875dcd72" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Alaya Resort Ubud</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8bf2ed85-20d9-4763-8292-576e942ed096" alt="" /><span>Bali, Indonesia</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">290 USDT</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flights-grid">
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>BKK</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 15 – Apr 22</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Philippine Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$189</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>SIN</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 18 – Apr 25</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Singapore Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$215</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>DPS</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 19 – Apr 26</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>AirAsia</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$242</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>HKT</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17 – Apr 24</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Thai Airways</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$278</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>KUL</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 20 – Apr 27</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Malaysia Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$198</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>CGK</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 16 – Apr 23</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Garuda Indonesia</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$265</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>SGN</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 14 – Apr 21</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Vietnam Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$172</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>MNL</span><span>-</span><span>RGN</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 21 – Apr 28</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Myanmar National</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$310</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ EAST ══ -->
+<section class="section" id="east">
+  <img class="east-decor" src="https://www.figma.com/api/mcp/asset/6b28caa7-5352-48fe-8c8d-1db7638e5b6f" alt="" />
+  <div class="section-inner">
+
+    <div class="europe-heading">
+      <div class="east-title-banner">
+        <img class="east-title-img" src="https://www.figma.com/api/mcp/asset/2d31e7fa-1207-40d6-a137-fe0c1d13f29c" alt="Middle East" />
+      </div>
+      <div class="tabs-row">
+        <button class="tab-pill active">Dubai</button>
+        <button class="tab-pill inactive">Abu Dhabi</button>
+        <button class="tab-pill inactive">Doha</button>
+        <button class="tab-pill inactive">Beirut</button>
+        <button class="tab-pill inactive">Amman</button>
+      </div>
+      <div class="tab-underline-row">
+        <button class="tab-underline active">Stays</button>
+        <button class="tab-underline inactive">Flights</button>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">9.2</span><span class="badge-rating-label">Superb</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Burj Al Arab Jumeirah</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Dubai, UAE</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">950 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.7</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Emirates Palace Abu Dhabi</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Abu Dhabi, UAE</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">720 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.4</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Mandarin Oriental Doha</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Doha, Qatar</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">480 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">7.9</span><span class="badge-rating-label">Good</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Le Gray Beirut</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Beirut, Lebanon</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">210 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.1</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Four Seasons Hotel Amman</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Amman, Jordan</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">320 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.9</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Atlantis The Palm Dubai</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Dubai, UAE</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">560 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">7.6</span><span class="badge-rating-label">Good</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">W Doha</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Doha, Qatar</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">395 USDT</span></div>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <img class="hotel-card-img" src="https://www.figma.com/api/mcp/asset/1978def9-cee3-47d6-8ce6-40896d8ddacd" alt="Hotel" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-tags">
+            <div class="badge-rating"><span class="badge-rating-score">8.3</span><span class="badge-rating-label">Excellent</span></div>
+            <div class="badge-type">Hotel<div class="badge-type-stars">
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+              <img src="https://www.figma.com/api/mcp/asset/df9107ed-f2c5-4e5f-9a4a-825da9c73399" alt="★" />
+            </div></div>
+          </div>
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">Kempinski Hotel Ishtar Dead Sea</p>
+            <div class="hotel-card-location"><img src="https://www.figma.com/api/mcp/asset/8d59e957-28e7-4d8b-a79e-d1993aea66e4" alt="" /><span>Amman, Jordan</span></div>
+          </div>
+          <div class="hotel-card-pricing"><span class="hotel-card-pricing-label">Price for 1 night:</span><span class="hotel-card-price">275 USDT</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flights-grid">
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>JFK</span><span>-</span><span>DXB</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 15 – Apr 22</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Emirates</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$649</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>LHR</span><span>-</span><span>DOH</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 18 – Apr 25</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Qatar Airways</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$580</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>CDG</span><span>-</span><span>AUH</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 19 – Apr 26</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Etihad Airways</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$612</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>FRA</span><span>-</span><span>BEY</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 17 – Apr 24</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Middle East Airlines</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$495</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>IST</span><span>-</span><span>AMM</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 20 – Apr 27</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Royal Jordanian</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$378</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>LHR</span><span>-</span><span>DXB</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 16 – Apr 23</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Emirates</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$559</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>JFK</span><span>-</span><span>DOH</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 14 – Apr 21</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Qatar Airways</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$720</span></div>
+      </div>
+      <div class="flight-card">
+        <div class="flight-card-bg"><img src="https://www.figma.com/api/mcp/asset/36e7d105-23d8-4bf7-ae39-40714e3b9d27" alt="" /></div>
+        <div class="flight-card-body">
+          <div class="flight-card-route"><span>CDG</span><span>-</span><span>DXB</span></div>
+          <div class="flight-card-meta"><span>Round-trip</span><span class="flight-sep">·</span><span>Apr 21 – Apr 28</span></div>
+          <div class="flight-card-airline"><img class="flight-airline-icon" src="https://www.figma.com/api/mcp/asset/2f6d654d-2309-4ae4-9136-34acf06a5770" alt="" /><span>Air France</span><span class="flight-sep">·</span><span>Economy</span></div>
+        </div>
+        <div class="flight-card-price-row"><span class="flight-from">From</span><span class="flight-price">$634</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TRAVEL GUIDE ══ -->
+<section class="travel-guide" id="travel-guide">
+  <img class="tg-decor" src="https://www.figma.com/api/mcp/asset/62c4ba35-39d2-4ec0-8ebd-14b6b03a00ed" alt="" />
+  <div class="travel-guide-inner">
+    <div style="display:flex;flex-direction:column;gap:16px;align-items:center;width:100%;">
+      <div class="tg-title-row">
+        <img class="tg-flower" src="https://www.figma.com/api/mcp/asset/64986272-5eca-47d7-88c1-f654f4259632" alt="" />
+        <h2 class="tg-title">Easter Destinations &amp; Travel Inspiration</h2>
+        <img class="tg-flower" src="https://www.figma.com/api/mcp/asset/64986272-5eca-47d7-88c1-f654f4259632" alt="" />
+      </div>
+      <p class="tg-subtitle">Explore cities known for vibrant Easter celebrations, spring markets, and cultural traditions</p>
+      <div class="tg-tabs">
+        <button class="tg-tab active">🇮🇹 Italy</button>
+        <button class="tg-tab inactive">🇪🇸 Spain</button>
+        <button class="tg-tab inactive">🇨🇿 Czech Republic</button>
+        <button class="tg-tab inactive">🇺🇸 USA</button>
+        <button class="tg-tab inactive">🇨🇦 Canada</button>
+      </div>
+    </div>
+    <div class="tg-cards">
+      <div class="article-card">
+        <img class="article-card-img" src="https://www.figma.com/api/mcp/asset/dcefde27-b75f-4971-95e0-4cdf5f8b1d27" alt="" />
+        <div>
+          <div class="article-card-meta"><span>Activities &amp; adventure</span><span>8min read</span></div>
+          <p class="article-card-title">The best places to travel according to your zodiac sign</p>
+          <button class="article-card-cta">Read more <img src="https://www.figma.com/api/mcp/asset/01398c0a-0077-4841-8dda-09ec4c641ce9" alt="" /></button>
+        </div>
+      </div>
+      <div class="article-card">
+        <img class="article-card-img" src="https://www.figma.com/api/mcp/asset/a9381f75-669d-46e1-bfe1-1c14c5611430" alt="" />
+        <div>
+          <div class="article-card-meta"><span>Activities &amp; adventure</span><span>8min read</span></div>
+          <p class="article-card-title">Barcelona travel guide: when to go and what to visit in the city</p>
+          <button class="article-card-cta">Read more <img src="https://www.figma.com/api/mcp/asset/01398c0a-0077-4841-8dda-09ec4c641ce9" alt="" /></button>
+        </div>
+      </div>
+      <div class="article-card">
+        <img class="article-card-img" src="https://www.figma.com/api/mcp/asset/b2cce0a2-370e-47b9-be32-238bf954f996" alt="" />
+        <div>
+          <div class="article-card-meta"><span>Activities &amp; adventure</span><span>8min read</span></div>
+          <p class="article-card-title">Fun facts about Mexico: 50 things you may not know</p>
+          <button class="article-card-cta">Read more <img src="https://www.figma.com/api/mcp/asset/01398c0a-0077-4841-8dda-09ec4c641ce9" alt="" /></button>
+        </div>
+      </div>
+      <div class="article-card">
+        <img class="article-card-img" src="https://www.figma.com/api/mcp/asset/9d89fe11-c51f-4806-b435-e79e5b8a29c1" alt="" />
+        <div>
+          <div class="article-card-meta"><span>Activities &amp; adventure</span><span>8min read</span></div>
+          <p class="article-card-title">The smart guide to sustainable travel and ecotourism</p>
+          <button class="article-card-cta">Read more <img src="https://www.figma.com/api/mcp/asset/01398c0a-0077-4841-8dda-09ec4c641ce9" alt="" /></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer-new">
+  <!-- Item-4: Why CuddlyNest -->
+  <div class="why-cn-outer">
+    <div class="why-cn-inner">
+      <p class="why-cn-title">Why travellers choose CuddlyNest</p>
+      <div class="why-cn-cards">
+        <div class="why-cn-card">
+          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/198e7afb-b3c7-466a-a91a-e2f6848fe884" alt="" />
+          <p class="why-cn-card-title">Lower fees. Better value.</p>
+          <p class="why-cn-card-sub">User-first pricing that saves you more.</p>
+        </div>
+        <div class="why-cn-card">
+          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/160f0b8d-df71-468f-a430-15721b2e1c45" alt="" />
+          <p class="why-cn-card-title">AI finds the best rates.</p>
+          <p class="why-cn-card-sub">Smart technology working for your wallet.</p>
+        </div>
+        <div class="why-cn-card">
+          <img class="why-cn-card-icon" src="https://www.figma.com/api/mcp/asset/48dcec13-560a-48d8-a57c-c6fe76208540" alt="" />
+          <p class="why-cn-card-title">Pay your way — even with crypto.</p>
+          <p class="why-cn-card-sub">Avoid FX markups and extra bank fees.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Easter wrap: illustration + footer bar (0px below Item-4) -->
+  <div class="footer-easter-wrap">
+    <img class="footer-easter-bg" src="https://www.figma.com/api/mcp/asset/9a3b626e-3b6e-47fa-94ef-b156f5ce90e2" alt="" />
+    <div class="footer-bar">
+      <div class="footer-links">
+        <a href="#" class="footer-link">Privacy policy</a>
+        <span class="footer-sep">·</span>
+        <a href="#" class="footer-link">Terms &amp; conditions</a>
+        <span class="footer-sep">·</span>
+        <a href="#" class="footer-link">Cookie policy</a>
+      </div>
+      <span class="footer-copy">© 2025 CuddlyNest.</span>
+      <div class="footer-social">
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/43178ca8-7d80-4b9a-82b8-deee55c533b3" alt="Instagram" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/02f36555-fcfe-472e-8c08-6b627037ff39" alt="YouTube" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/425b20bd-01c2-4fb4-b00b-c3bca686d5ea" alt="Facebook" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/346a3eb7-a4fe-4d32-b356-5da94187963f" alt="X" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/f00b5bf3-98ad-4a07-b93d-25f6eddba11b" alt="LinkedIn" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/83b9f0c6-4650-4e45-b0b4-2fdf72683783" alt="Pinterest" />
+        <img class="footer-social-icon" src="https://www.figma.com/api/mcp/asset/0ab9907c-f594-46be-8bac-93bc5783759f" alt="Medium" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Hotel data from CSV ──────────────────────────────────────────────
+  const HOTEL_DATA = {
+  "Middle East": {
+    "Dubai": [
+      {
+        "name": "Sun And Sands Downtown Hotel",
+        "price": "$74",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6822013/1/248a6eteh3nyxvp8ktaqnh2peqqbwr.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ae/sun-and-sands-downtown-hotel-8848482?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=279&location=Dubai%2C%20Dubai%20Emirate%2C%20United%20Arab%20Emirates&sessionid=45414e90447add46&location_type=City&type=viewport&aLat=25.3585607&aLng=55.5650393&bLat=24.7934842&bLng=54.89045429999999&lat=25.204849300000003&lng=55.2707828"
+      },
+      {
+        "name": "Citymax Hotel Business Bay",
+        "price": "$75",
+        "img": "https://img.cuddlynest.com/images/listings/2025/03/17/12/e80ffdbcb8fc62e5425f4321e76299af.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ae/citymax-hotel-business-bay-8283432?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=453&location=Dubai%2C%20Dubai%20Emirate%2C%20United%20Arab%20Emirates&sessionid=45414e90447add46&location_type=City&type=viewport&aLat=25.3585607&aLng=55.5650393&bLat=24.7934842&bLng=54.89045429999999&lat=25.204849300000003&lng=55.2707828"
+      },
+      {
+        "name": "Citymax Hotel Bur Dubai",
+        "price": "$77",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6859196/1/nxbiwe4sbm0pr331or07yrvenoavyj.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ae/citymax-hotel-bur-dubai-8837495?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=348&location=Dubai%2C%20Dubai%20Emirate%2C%20United%20Arab%20Emirates&sessionid=45414e90447add46&location_type=City&type=viewport&aLat=25.3585607&aLng=55.5650393&bLat=24.7934842&bLng=54.89045429999999&lat=25.204849300000003&lng=55.2707828"
+      }
+    ],
+    "Abu Dhabi": [
+      {
+        "name": "Kingsgate Hotel",
+        "price": "$170",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/22/8965118/1/pkxszf0w5tfbh9kj8ob58mlo5dajhh.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ae/kingsgate-hotel-8965118?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=217&location=Abu%20Dhabi%2C%20Abu%20Dhabi%20Emirate%2C%20United%20Arab%20Emirates&sessionid=ba674dd97855b0da&location_type=City&type=viewport&aLat=24.57578977&aLng=54.68657689&bLat=24.32909728&bLng=54.19512488&lat=24.4525039&lng=54.44085088"
+      },
+      {
+        "name": "Al Jazeera Royal Hotel",
+        "price": "$164",
+        "img": "https://img.cuddlynest.com/images/listings/2022/06/06/15/941bc921edc6e2e5b4ea5c341677f7f9.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ae/al-jazeera-royal-hotel-4930318?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=185&location=Abu%20Dhabi%2C%20Abu%20Dhabi%20Emirate%2C%20United%20Arab%20Emirates&sessionid=ba674dd97855b0da&location_type=City&type=viewport&aLat=24.57578977&aLng=54.68657689&bLat=24.32909728&bLng=54.19512488&lat=24.4525039&lng=54.44085088"
+      },
+      {
+        "name": "City Seasons Al Hamra Hotel",
+        "price": "$192",
+        "img": "https://img.cuddlynest.com/images/listings/2022/8/23/3680867/1/gnhwl0snpm91eldrqxq7yuo2yadtt5.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ae/city-seasons-al-hamra-hotel-2998734?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=201&location=Abu%20Dhabi%2C%20Abu%20Dhabi%20Emirate%2C%20United%20Arab%20Emirates&sessionid=ba674dd97855b0da&location_type=City&type=viewport&aLat=24.57578977&aLng=54.68657689&bLat=24.32909728&bLng=54.19512488&lat=24.4525039&lng=54.44085088"
+      }
+    ],
+    "Beirut": [
+      {
+        "name": "Hotel Napoleon Beirut",
+        "price": "$100",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/7008411/3/is0o1b52p0wbqhv1f4kf0li9nswcsb.jpg",
+        "url": "https://www.cuddlynest.com/hotel/lb/hotel-napoleon-beirut-4582209?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=180&location=Beirut%2C%20Lebanon&sessionid=409567b37cb89a3b&location_type=City&type=viewport&aLat=33.9161091&aLng=35.5416362&bLat=33.8623275&bLng=35.4669284&lat=33.8937913&lng=35.50177670000001"
+      },
+      {
+        "name": "Three Onine Urban House",
+        "price": "$201",
+        "img": "https://img.cuddlynest.com/images/listings/2024/4/2/7570535/2/fjvsgdx16aiw0upgvq19tdlk11etrb.jpg",
+        "url": "https://www.cuddlynest.com/vacation-rental/lb/three-onine-urban-house-3373817?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=156&location=Beirut%2C%20Lebanon&sessionid=409567b37cb89a3b&location_type=City&type=viewport&aLat=33.9161091&aLng=35.5416362&bLat=33.8623275&bLng=35.4669284&lat=33.8937913&lng=35.50177670000001"
+      },
+      {
+        "name": "Mozart Hotel",
+        "price": "$156",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6998236/1/up4e2zh1zpahh3mfxn3qv8e8dhq8sm.jpg",
+        "url": "https://www.cuddlynest.com/hotel/lb/mozart-hotel-10589291?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=158&location=Beirut%2C%20Lebanon&sessionid=409567b37cb89a3b&location_type=City&type=viewport&aLat=33.9161091&aLng=35.5416362&bLat=33.8623275&bLng=35.4669284&lat=33.8937913&lng=35.50177670000001"
+      }
+    ],
+    "Amman": [
+      {
+        "name": "Al Nujoom Hotel Suites",
+        "price": "$93",
+        "img": "https://img.cuddlynest.com/images/listings/2023/09/01/09/4d27a8fb9208bc7c21efb44951243b2f.jpg",
+        "url": "https://www.cuddlynest.com/hotel/jo/al-nujoom-hotel-suites-4526893?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=213&location=Amman%2C%20Amman%20Governorate%2C%20Jordan&sessionid=6f17a0e770fe6207&location_type=City&type=viewport&aLat=32.06483774271589&aLng=35.97026006433778&bLat=31.86854286600396&bLng=35.84940509650566&lat=31.966742764953896&lng=35.90983258042172"
+      },
+      {
+        "name": "Amman Palace Hotel",
+        "price": "$97",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/9/8379745/0/u0l9ze0beh7vpt9n7ges7elxa1yt4r.jpg",
+        "url": "https://www.cuddlynest.com/unique-stay/jo/amman-palace-hotel-4408327?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=243&location=Amman%2C%20Amman%20Governorate%2C%20Jordan&sessionid=6f17a0e770fe6207&location_type=City&type=viewport&aLat=32.06483774271589&aLng=35.97026006433778&bLat=31.86854286600396&bLng=35.84940509650566&lat=31.966742764953896&lng=35.90983258042172"
+      },
+      {
+        "name": "New Park Hotel",
+        "price": "$96",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6991922/1/4jzgbcvnkqplyzp62en1ijv4il9lpo.jpg",
+        "url": "https://www.cuddlynest.com/hotel/jo/new-park-hotel-3395062?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=216&location=Amman%2C%20Amman%20Governorate%2C%20Jordan&sessionid=6f17a0e770fe6207&location_type=City&type=viewport&aLat=32.06483774271589&aLng=35.97026006433778&bLat=31.86854286600396&bLng=35.84940509650566&lat=31.966742764953896&lng=35.90983258042172"
+      }
+    ],
+    "Doha": [
+      {
+        "name": "The Town Hotel Doha",
+        "price": "$73",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/7012488/1/996qm46bspjo0meawh9015c67adtqc.jpg",
+        "url": "https://www.cuddlynest.com/hotel/qa/the-town-hotel-doha-2837595?checkin=2026-03-31&checkout=2026-04-02&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=128&location=Doha%2C%20Qatar&sessionid=b9659a6c8fd011c8&location_type=City&type=viewport"
+      },
+      {
+        "name": "Doha Dynasty Hotel",
+        "price": "$74",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/7023518/1/0jvqzjjnipumw2d6f7r5feizixvjji.jpg",
+        "url": "https://www.cuddlynest.com/hotel/qa/doha-dynasty-hotel-8733423?checkin=2026-03-31&checkout=2026-04-02&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=82&location=Doha%2C%20Qatar&sessionid=b9659a6c8fd011c8&location_type=City&type=viewport"
+      },
+      {
+        "name": "Ibis Doha",
+        "price": "$94",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/7015614/1/7tficmk6hppm2c2aeq4g6bvmn3ujyk.jpg",
+        "url": "https://www.cuddlynest.com/hotel/qa/ibis-doha-8295536?checkin=2026-03-31&checkout=2026-04-02&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=101&location=Doha%2C%20Qatar&sessionid=b9659a6c8fd011c8&location_type=City&type=viewport"
+      }
+    ]
+  },
+  "Southeast Asia": {
+    "Phuket": [
+      {
+        "name": "The Malika",
+        "price": "$144",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/11/6584323/1/7e1lnh8wg2sqdyn2xouk42x4k77cbl.jpg",
+        "url": "https://www.cuddlynest.com/hotel/th/the-malika-3027884?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=174&location=Phuket%2C%20Thailand&sessionid=0393b9a29e5e1fc5&location_type=State&type=viewport&aLat=8.016797604&aLng=98.42812763&bLat=7.79780011&bLng=98.27946887&lat=7.89&lng=98.39833"
+      },
+      {
+        "name": "Chinotel",
+        "price": "$85",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/11/6645085/4/dhwmscf9m9eev90b4ssf8sblizp2lo.jpg",
+        "url": "https://www.cuddlynest.com/hotel/th/chinotel-2669361?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=94&location=Phuket%2C%20Thailand&sessionid=0393b9a29e5e1fc5&location_type=State&type=viewport&aLat=8.016797604&aLng=98.42812763&bLat=7.79780011&bLng=98.27946887&lat=7.89&lng=98.39833"
+      },
+      {
+        "name": "Chino Town Gallery Alley",
+        "price": "$80",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/11/6577271/1/1rfnjv8a46r7c7z7fvod2vfnwieb7d.jpg",
+        "url": "https://www.cuddlynest.com/hotel/th/chino-town-gallery-alley-3348704?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=87&location=Phuket%2C%20Thailand&sessionid=0393b9a29e5e1fc5&location_type=State&type=viewport&aLat=8.016797604&aLng=98.42812763&bLat=7.79780011&bLng=98.27946887&lat=7.89&lng=98.39833"
+      }
+    ],
+    "Bali": [
+      {
+        "name": "Mahana Boutique Apartment",
+        "price": "$93",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/11/6576007/1/e56auo7yzf0ugwt8i9ez29j7f8v4t9.jpg",
+        "url": "https://www.cuddlynest.com/apartment/id/mahana-boutique-apartment-2768121?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=101&location=Bali%2C%20Indonesia&sessionid=5e3b6973cc42f184&location_type=State&type=viewport&aLat=-8.235751492557124&aLng=115.36576696565896&bLat=-8.98322381379781&bLng=115.06844946964941&lat=-8.609672208299639&lng=115.21710821765417"
+      },
+      {
+        "name": "Ibis Styles Bali Denpasar Chse Certified",
+        "price": "$76",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/12/8409290/0/ckeweu7h11f59toie6b1tbc2mbmbpf.jpg",
+        "url": "https://www.cuddlynest.com/hotel/id/ibis-styles-bali-denpasar-chse-certified-4010816?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=80&location=Bali%2C%20Indonesia&sessionid=5e3b6973cc42f184&location_type=State&type=viewport&aLat=-8.235751492557124&aLng=115.36576696565896&bLat=-8.98322381379781&bLng=115.06844946964941&lat=-8.609672208299639&lng=115.21710821765417"
+      },
+      {
+        "name": "Pop Hotel Denpasar Teuku Umar",
+        "price": "$72",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/12/8414152/0/j8cbgoo5jn8kuam55rp8ro9humiy6o.jpg",
+        "url": "https://www.cuddlynest.com/hotel/id/pop-hotel-denpasar-teuku-umar-3053779?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=73&location=Bali%2C%20Indonesia&sessionid=5e3b6973cc42f184&location_type=State&type=viewport&aLat=-8.235751492557124&aLng=115.36576696565896&bLat=-8.98322381379781&bLng=115.06844946964941&lat=-8.609672208299639&lng=115.21710821765417"
+      }
+    ],
+    "Manila": [
+      {
+        "name": "Oyo 107 Orange Nest Hotel",
+        "price": "$59",
+        "img": "https://img.cuddlynest.com/images/listings/2022/05/25/15/28459855646f683305b3dc7d797012c4.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ph/oyo-107-orange-nest-hotel-3994798?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=63&location=Manila%2C%20Metro%20Manila%2C%20Philippines&sessionid=4e4757210770eccf&location_type=City&type=viewport&aLat=14.6390175&aLng=121.0261686&bLat=14.5539791&bLng=120.932951&lat=14.599512400000002&lng=120.98421950000001"
+      },
+      {
+        "name": "Astrotel Novaliches",
+        "price": "$49",
+        "img": "https://img.cuddlynest.com/images/listings/2025/4/25/10598862/1/9gux8tihosc1kjxdrnlynh1iqsndli.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ph/astrotel-novaliches-10598862?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=51&location=Manila%2C%20Metro%20Manila%2C%20Philippines&sessionid=4e4757210770eccf&location_type=City&type=viewport&aLat=14.6390175&aLng=121.0261686&bLat=14.5539791&bLng=120.932951&lat=14.599512400000002&lng=120.98421950000001"
+      },
+      {
+        "name": "Manila Manor Hotel",
+        "price": "$62",
+        "img": "https://img.cuddlynest.com/images/listings/2022/8/23/9482776/2/lzlbtypfvvqdo9u27760gs8fcf6wpd.jpg",
+        "url": "https://www.cuddlynest.com/unique-stay/ph/manila-manor-hotel-4045660?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=75&location=Manila%2C%20Metro%20Manila%2C%20Philippines&sessionid=4e4757210770eccf&location_type=City&type=viewport&aLat=14.6390175&aLng=121.0261686&bLat=14.5539791&bLng=120.932951&lat=14.599512400000002&lng=120.98421950000001"
+      }
+    ],
+    "Cebu City": [
+      {
+        "name": "Dynasty Tourist Inn",
+        "price": "$68",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6841691/1/6s24b7xw43pr30aq3zqv0z9hxfaffp.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ph/dynasty-tourist-inn-8943483?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=96&location=Cebu%20City%2C%20Central%20Visayas%2C%20Philippines&sessionid=eb5b687d7aa0c8b1&location_type=City&type=viewport&aLat=10.498277&aLng=123.9291998&bLat=10.2592519&bLng=123.7633896&lat=10.3156992&lng=123.88543659999999"
+      },
+      {
+        "name": "Reddoorz Junquera Extension Cebu",
+        "price": "$53",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6796707/1/7t3expsj1dk6rr5mxss2l52yszbfl0.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ph/reddoorz-junquera-extension-cebu-4242321?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=57&location=Cebu%20City%2C%20Central%20Visayas%2C%20Philippines&sessionid=eb5b687d7aa0c8b1&location_type=City&type=viewport&aLat=10.498277&aLng=123.9291998&bLat=10.2592519&bLng=123.7633896&lat=10.3156992&lng=123.88543659999999"
+      },
+      {
+        "name": "Crown Regency Residences Cebu",
+        "price": "$70",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/11/6750326/1/ihq06anrwtpwtmlh8e2rrj525sbsfz.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ph/crown-regency-residences-cebu-8796936?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=78&location=Cebu%20City%2C%20Central%20Visayas%2C%20Philippines&sessionid=eb5b687d7aa0c8b1&location_type=City&type=viewport&aLat=10.498277&aLng=123.9291998&bLat=10.2592519&bLng=123.7633896&lat=10.3156992&lng=123.88543659999999"
+      }
+    ],
+    "Singapore": [
+      {
+        "name": "Hotel 81 Changi",
+        "price": "$222",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6990272/1/e7bld39qu7751rqmaaveduii27cc8r.jpg",
+        "url": "https://www.cuddlynest.com/hotel/sg/hotel-81-changi-2735029?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=282&location=Singapore&sessionid=969b6cebcb5149da&location_type=City&type=viewport&aLat=1.339725111504191&aLng=103.87694995545783&bLat=1.2678850267044772&bLng=103.82439115299711&lat=1.303805325367477&lng=103.85067055422746"
+      },
+      {
+        "name": "Penta Hotel",
+        "price": "$281",
+        "img": "https://img.cuddlynest.com/images/listings/2022/06/10/13/9857c4d7be25636d321bb62ad99eb29b.jpg",
+        "url": "https://www.cuddlynest.com/hotel/sg/penta-hotel-5071788?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=303&location=Singapore&sessionid=969b6cebcb5149da&location_type=City&type=viewport&aLat=1.339725111504191&aLng=103.87694995545783&bLat=1.2678850267044772&bLng=103.82439115299711&lat=1.303805325367477&lng=103.85067055422746"
+      },
+      {
+        "name": "Sandpiper Hotel",
+        "price": "$168",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/7000988/1/i42qbu68mfahsescry4c1apy6x9b0k.jpg",
+        "url": "https://www.cuddlynest.com/hotel/sg/sandpiper-hotel-8954173?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=420&location=Singapore&sessionid=969b6cebcb5149da&location_type=City&type=viewport&aLat=1.339725111504191&aLng=103.87694995545783&bLat=1.2678850267044772&bLng=103.82439115299711&lat=1.303805325367477&lng=103.85067055422746"
+      }
+    ]
+  },
+  "Europe": {
+    "Rome": [
+      {
+        "name": "Hotel Alba Roma",
+        "price": "$190",
+        "img": "https://img.cuddlynest.com/images/listings/2022/05/21/05/0ffccaa98e9d7c12c2757e6d8c212f94.jpg",
+        "url": "https://www.cuddlynest.com/hotel/it/hotel-alba-roma-10582718?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=197&location=Rome%2C%20Lazio%2C%20Italy&sessionid=9b574db3c5736526&location_type=City&type=viewport"
+      },
+      {
+        "name": "Hotel Romulus",
+        "price": "$233",
+        "img": "https://img.cuddlynest.com/images/listings/2022/04/30/05/6bfdb595df2dffcafeceba12cb8c5272.jpg",
+        "url": "https://www.cuddlynest.com/hotel/it/hotel-romulus-8810943?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=335&location=Rome%2C%20Lazio%2C%20Italy&sessionid=9b574db3c5736526&location_type=City&type=viewport"
+      },
+      {
+        "name": "Hotel Degli Imperatori",
+        "price": "$231",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/28/8803432/10/k188jwxv4f44a9szj89z6bnwjaq9n9.jpg",
+        "url": "https://www.cuddlynest.com/hotel/it/hotel-degli-imperatori-8803432?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=270&location=Rome%2C%20Lazio%2C%20Italy&sessionid=9b574db3c5736526&location_type=City&type=viewport"
+      }
+    ],
+    "Seville": [
+      {
+        "name": "Torre De Los Guzmanes",
+        "price": "$386",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/7/8340151/0/zxy0jrtkube6faexh8fhbuc9gceujm.jpg",
+        "url": "https://www.cuddlynest.com/hotel/es/torre-de-los-guzmanes-8858930?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=478&location=Seville%2C%20Spain&sessionid=9013d96f02519732&location_type=State&type=viewport&aLat=39.5&aLng=-3.5&bLat=35.5&bLng=-7.5&lat=37.5&lng=-5.5"
+      },
+      {
+        "name": "Abades Benacazn Hotel",
+        "price": "$292",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/7/8339465/0/hd8v0qnsdlh0okkgoj9j2f49vzopau.jpg",
+        "url": "https://www.cuddlynest.com/hotel/es/abades-benacazn-hotel-3136858?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=292&location=Seville%2C%20Spain&sessionid=9013d96f02519732&location_type=State&type=viewport&aLat=39.5&aLng=-3.5&bLat=35.5&bLng=-7.5&lat=37.5&lng=-5.5"
+      },
+      {
+        "name": "Hotel Oromana",
+        "price": "$378",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/11/6664444/1/73z7iv35718dwn1u3djrgke6sexpft.jpg",
+        "url": "https://www.cuddlynest.com/hotel/es/hotel-oromana-2966772?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=466&location=Seville%2C%20Spain&sessionid=9013d96f02519732&location_type=State&type=viewport&aLat=39.5&aLng=-3.5&bLat=35.5&bLng=-7.5&lat=37.5&lng=-5.5"
+      }
+    ],
+    "Vienna": [
+      {
+        "name": "Arcotel Donauzentrum",
+        "price": "$324",
+        "img": "https://img.cuddlynest.com/images/listings/2022/04/30/03/261178fa47382e4177bd4d15858a5e2f.jpg",
+        "url": "https://www.cuddlynest.com/hotel/at/arcotel-donauzentrum-3992896?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=341&location=Vienna%2C%20Austria&sessionid=62e60f35050ea157&location_type=State&type=viewport&aLat=50.20833&aLng=18.37306&bLat=46.20833&bLng=14.373059999999999&lat=48.20833&lng=16.37306"
+      },
+      {
+        "name": "Ibis Styles Wien Messe Prater",
+        "price": "$391",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/10/6553797/1/3f3g5ack6j1e5wjde4tsoook54pjbj.jpg",
+        "url": "https://www.cuddlynest.com/hotel/at/ibis-styles-wien-messe-prater-3113196?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=423&location=Vienna%2C%20Austria&sessionid=62e60f35050ea157&location_type=State&type=viewport&aLat=50.20833&aLng=18.37306&bLat=46.20833&bLng=14.373059999999999&lat=48.20833&lng=16.37306"
+      },
+      {
+        "name": "Lenas Donau",
+        "price": "$234",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/12/8547046/1/22i4ic00szcmcupwqmdx22not665tl.jpg",
+        "url": "https://www.cuddlynest.com/hotel/at/lenas-donau-3992910?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=243&location=Vienna%2C%20Austria&sessionid=62e60f35050ea157&location_type=State&type=viewport&aLat=50.20833&aLng=18.37306&bLat=46.20833&bLng=14.373059999999999&lat=48.20833&lng=16.37306"
+      }
+    ],
+    "Prague": [
+      {
+        "name": "A And O Prague Rhea",
+        "price": "$151",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/9/8391761/0/r110aw4uq1wbpddeewhgt6lqxlqmjl.jpg",
+        "url": "https://www.cuddlynest.com/hotel/cz/a-and-o-prague-rhea-8835404?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=174&location=Prague%2C%20Czech%20Republic&sessionid=66caad5168a6d46c&location_type=City&type=viewport&aLat=50.177403&aLng=14.7067945&bLat=49.94193629999999&bLng=14.2244533&lat=50.0755381&lng=14.4378005"
+      },
+      {
+        "name": "Gallery Hotel Sis",
+        "price": "$166",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/9/8395499/0/ak1j7sstb5vtcsdythjlbc98786cm6.jpg",
+        "url": "https://www.cuddlynest.com/hotel/cz/gallery-hotel-sis-8808676?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=210&location=Prague%2C%20Czech%20Republic&sessionid=66caad5168a6d46c&location_type=City&type=viewport&aLat=50.177403&aLng=14.7067945&bLat=49.94193629999999&bLng=14.2244533&lat=50.0755381&lng=14.4378005"
+      },
+      {
+        "name": "Hotel Energie",
+        "price": "$218",
+        "img": "https://img.cuddlynest.com/images/listings/2022/05/02/00/6ebe4ddeee42f7297cf1c4a2140ad65e.jpg",
+        "url": "https://www.cuddlynest.com/hotel/cz/hotel-energie-8806610?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=238&location=Prague%2C%20Czech%20Republic&sessionid=66caad5168a6d46c&location_type=City&type=viewport&aLat=50.177403&aLng=14.7067945&bLat=49.94193629999999&bLng=14.2244533&lat=50.0755381&lng=14.4378005"
+      }
+    ],
+    "Florence": [
+      {
+        "name": "Hotel Corolle",
+        "price": "$233",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/10/6534301/1/wm91bpmj90ppt27otg25r5j4x5amwg.jpg",
+        "url": "https://www.cuddlynest.com/hotel/it/hotel-corolle-8795853?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=1368&location=Florence%2C%20Tuscany%2C%20Italy&sessionid=91e2a218c8eb9cf4&location_type=City&type=viewport"
+      },
+      {
+        "name": "Hotel Real",
+        "price": "$211",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/9/8385088/0/7ei5su744rkd10xgqkpgbzyskq2dlh.jpg",
+        "url": "https://www.cuddlynest.com/hotel/it/hotel-real-8786961?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=960&location=Florence%2C%20Tuscany%2C%20Italy&sessionid=91e2a218c8eb9cf4&location_type=City&type=viewport"
+      },
+      {
+        "name": "Auto Park Hotel",
+        "price": "$252",
+        "img": "https://img.cuddlynest.com/images/listings/2026/3/9/8392471/0/tpk98gwp00o79kdatsgoia71f6sy13.jpg",
+        "url": "https://www.cuddlynest.com/hotel/it/auto-park-hotel-8848141?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=1641&location=Florence%2C%20Tuscany%2C%20Italy&sessionid=91e2a218c8eb9cf4&location_type=City&type=viewport"
+      }
+    ]
+  },
+  "North America": {
+    "New York": [
+      {
+        "name": "Days Hotel By Wyndham North Bergen Nyc Area",
+        "price": "$398",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/11/6569263/1/aadfufma5q53xiy1rr4uh2he6twxlp.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/days-hotel-by-wyndham-north-bergen-nyc-area-8835678?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=446&location=New%20York%2C%20United%20States&sessionid=1522816618e4c056&location_type=State&type=viewport&aLat=40.82977798&aLng=-73.89799779&bLat=40.6622706&bLng=-74.04665655&lat=42.75121096&lng=-75.46524715"
+      },
+      {
+        "name": "Best Western Premier Nyc Gateway Hotel",
+        "price": "$546",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/6812072/1/1amy63s8d30vi9fiq0qfhwfl557oic.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/best-western-premier-nyc-gateway-hotel-3370272?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=570&location=New%20York%2C%20United%20States&sessionid=1522816618e4c056&location_type=State&type=viewport&aLat=40.82977798&aLng=-73.89799779&bLat=40.6622706&bLng=-74.04665655&lat=42.75121096&lng=-75.46524715"
+      },
+      {
+        "name": "Surestay Hotel By Best Western Secaucus Meadowlands",
+        "price": "$523",
+        "img": "https://img.cuddlynest.com/images/listings/2024/10/22/8378098/2/b5tu7dfqsbq0uw70xj2cxjeunkgs45.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/surestay-hotel-by-best-western-secaucus-meadowlands-3981654?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=505&location=New%20York%2C%20United%20States&sessionid=1522816618e4c056&location_type=State&type=viewport&aLat=40.82977798&aLng=-73.89799779&bLat=40.6622706&bLng=-74.04665655&lat=42.75121096&lng=-75.46524715"
+      }
+    ],
+    "Boston": [
+      {
+        "name": "Courtyard Boston Milford",
+        "price": "$280",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/21/8901278/1/r5e32ygv4t9jxk1jg759t2pi4x4xmg.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/courtyard-boston-milford-8901278?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=304&location=Boston%2C%20Massachusetts%2C%20United%20States&sessionid=00e1f789d755e772&location_type=City&type=viewport&aLat=42.40081989999999&aLng=-70.749455&bLat=42.22788&bLng=-71.191113&lat=42.360082500000004&lng=-71.0588801"
+      },
+      {
+        "name": "Holiday Inn Express North Attleboro",
+        "price": "$257",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/22/8955188/1/nm2luix57s107hdrjv7b6i6qgkui97.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/holiday-inn-express-north-attleboro-8955188?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=283&location=Boston%2C%20Massachusetts%2C%20United%20States&sessionid=00e1f789d755e772&location_type=City&type=viewport&aLat=42.40081989999999&aLng=-70.749455&bLat=42.22788&bLng=-71.191113&lat=42.360082500000004&lng=-71.0588801"
+      },
+      {
+        "name": "Holiday Inn Express Plainville",
+        "price": "$290",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/22/8943839/1/c1vwua2rbory8oiwz8txu181u4l1ml.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/holiday-inn-express-plainville-8943839?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=319&location=Boston%2C%20Massachusetts%2C%20United%20States&sessionid=00e1f789d755e772&location_type=City&type=viewport&aLat=42.40081989999999&aLng=-70.749455&bLat=42.22788&bLng=-71.191113&lat=42.360082500000004&lng=-71.0588801"
+      }
+    ],
+    "New Orleans": [
+      {
+        "name": "Days Inn New Orleans Pontchartrain",
+        "price": "$187",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/20/8805314/1/ducebnmlh8g4j4v6xcsmir0p4hgn2w.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/days-inn-new-orleans-pontchartrain-8805314?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=210&location=New%20Orleans%2C%20Louisiana%2C%20United%20States&sessionid=cc58df100680609d&location_type=City&type=viewport&aLat=30.199332&aLng=-89.625053&bLat=29.8666609&bLng=-90.14007389999999&lat=29.9510658&lng=-90.0715323"
+      },
+      {
+        "name": "Grand Z Casino Hotel By Red Lion Hotels",
+        "price": "$130",
+        "img": "https://img.cuddlynest.com/images/listings/2025/4/25/10641435/1/gzuz1orrbrq8z9p78imnrubslft591.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/grand-z-casino-hotel-by-red-lion-hotels-10641435?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=199&location=New%20Orleans%2C%20Louisiana%2C%20United%20States&sessionid=cc58df100680609d&location_type=City&type=viewport&aLat=30.199332&aLng=-89.625053&bLat=29.8666609&bLng=-90.14007389999999&lat=29.9510658&lng=-90.0715323"
+      },
+      {
+        "name": "Omni Riverfront Hotel",
+        "price": "$196",
+        "img": "https://img.cuddlynest.com/images/listings/2023/9/12/7036728/1/ces67zjdjjcyezvucvrmtzowqq2shd.jpg",
+        "url": "https://www.cuddlynest.com/hotel/us/omni-riverfront-hotel-8546589?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=208&location=New%20Orleans%2C%20Louisiana%2C%20United%20States&sessionid=cc58df100680609d&location_type=City&type=viewport&aLat=30.199332&aLng=-89.625053&bLat=29.8666609&bLng=-90.14007389999999&lat=29.9510658&lng=-90.0715323"
+      }
+    ],
+    "Toronto": [
+      {
+        "name": "Woodbine Hotel Suites",
+        "price": "$268",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/28/8823756/7/fl716mcoujhgiydoxy03848yxbfb82.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ca/woodbine-hotel-suites-8823756?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=354&location=Toronto%2C%20Ontario%2C%20Canada&sessionid=4a9e15627ea5d622&location_type=City&type=viewport&aLat=43.8554579&aLng=-79.1168971&bLat=43.5810245&bLng=-79.639219&lat=43.653226000000004&lng=-79.3831843"
+      },
+      {
+        "name": "Crowne Plaza Toronto Airport",
+        "price": "$310",
+        "img": "https://img.cuddlynest.com/images/listings/2022/8/22/661795/1/2fgb0v34279pmaqusew5asvolzl9kh.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ca/crowne-plaza-toronto-airport-8860214?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=345&location=Toronto%2C%20Ontario%2C%20Canada&sessionid=4a9e15627ea5d622&location_type=City&type=viewport&aLat=43.8554579&aLng=-79.1168971&bLat=43.5810245&bLng=-79.639219&lat=43.653226000000004&lng=-79.3831843"
+      },
+      {
+        "name": "Pearson Hotel Conference Centre Toronto Airport",
+        "price": "$329",
+        "img": "https://img.cuddlynest.com/images/listings/2024/11/20/8786470/1/5qhief4rdxti9gy2grm4snkgnqxq28.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ca/pearson-hotel-conference-centre-toronto-airport-8786470?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=365&location=Toronto%2C%20Ontario%2C%20Canada&sessionid=4a9e15627ea5d622&location_type=City&type=viewport&aLat=43.8554579&aLng=-79.1168971&bLat=43.5810245&bLng=-79.639219&lat=43.653226000000004&lng=-79.3831843"
+      }
+    ],
+    "Vancouver": [
+      {
+        "name": "Gec Granville Suites Downtown",
+        "price": "$341",
+        "img": "https://img.cuddlynest.com/images/listings/2022/8/23/12840443/1/mqqoio936kepozb5rqrsxfb32pesx8.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ca/gec-granville-suites-downtown-8835511?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=363&location=Vancouver%2C%20British%20Columbia%2C%20Canada&sessionid=c887f35d03c01b05&location_type=City&type=viewport&aLat=49.3172939&aLng=-123.023068&bLat=49.19817700000001&bLng=-123.22474&lat=49.282729100000005&lng=-123.1207375"
+      },
+      {
+        "name": "Best Western Plus Vancouver Airport Hotel",
+        "price": "$342",
+        "img": "https://img.cuddlynest.com/images/listings/2022/8/11/40702/1/kiuwbr870mf58fmbe81jmkpgv4cvfw.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ca/best-western-plus-vancouver-airport-hotel-4286903?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=347&location=Vancouver%2C%20British%20Columbia%2C%20Canada&sessionid=c887f35d03c01b05&location_type=City&type=viewport&aLat=49.3172939&aLng=-123.023068&bLat=49.19817700000001&bLng=-123.22474&lat=49.282729100000005&lng=-123.1207375"
+      },
+      {
+        "name": "Century Plaza Hotel Spa",
+        "price": "$321",
+        "img": "https://img.cuddlynest.com/images/listings/2021/09/15/00/637f289c911e9c3e9a97f589326d7034.jpg",
+        "url": "https://www.cuddlynest.com/hotel/ca/century-plaza-hotel-spa-3217647?checkin=2026-03-31&checkout=2026-04-03&adults=2&rooms=1&infants=0&children=0&childrenAges=&price=345&location=Vancouver%2C%20British%20Columbia%2C%20Canada&sessionid=c887f35d03c01b05&location_type=City&type=viewport&aLat=49.3172939&aLng=-123.023068&bLat=49.19817700000001&bLng=-123.22474&lat=49.282729100000005&lng=-123.1207375"
+      }
+    ]
+  }
+};
+
+  // Maps section id → region key in HOTEL_DATA
+  const SECTION_REGION = {
+    'europe':         'Europe',
+    'north-america':  'North America',
+    'southeast-asia': 'Southeast Asia',
+    'east':           'Middle East'
+  };
+
+  function renderStays(section) {
+    const regionKey = SECTION_REGION[section.id];
+    if (!regionKey) return;
+    const activeTab = section.querySelector('.tab-pill.active');
+    if (!activeTab) return;
+    const city = activeTab.textContent.trim();
+    const hotels = (HOTEL_DATA[regionKey] || {})[city] || [];
+    const grid = section.querySelector('.cards-grid');
+    if (!grid) return;
+    grid.innerHTML = hotels.map(h => `
+      <a class="hotel-card" href="${h.url}" target="_blank" rel="noopener noreferrer">
+        <img class="hotel-card-img" src="${h.img}" alt="${h.name}" loading="lazy" />
+        <div class="hotel-card-body">
+          <div class="hotel-card-heading">
+            <p class="hotel-card-name">${h.name}</p>
+            <div class="hotel-card-location">
+              <span>${city}</span>
+            </div>
+          </div>
+          <div class="hotel-card-pricing">
+            <span class="hotel-card-pricing-label">From</span>
+            <span class="hotel-card-price">${h.price}</span>
+            <span class="hotel-card-pricing-label">per night</span>
+          </div>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  // Render all sections on load
+  document.querySelectorAll('.section[id]').forEach(renderStays);
+
+  // ── Tab interactions ──────────────────────────────────────────────────
+  document.querySelectorAll('.tab-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.tabs-row').querySelectorAll('.tab-pill').forEach(b => {
+        b.className = 'tab-pill inactive';
+      });
+      btn.className = 'tab-pill active';
+      const section = btn.closest('.section');
+      if (section) renderStays(section);
+    });
+  });
+
+  document.querySelectorAll('.tab-underline').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.tab-underline-row').querySelectorAll('.tab-underline').forEach(b => {
+        b.className = 'tab-underline inactive';
+      });
+      btn.className = 'tab-underline active';
+      const section = btn.closest('.section');
+      if (!section) return;
+      const staysGrid = section.querySelector('.cards-grid');
+      const flightsGrid = section.querySelector('.flights-grid');
+      if (!staysGrid || !flightsGrid) return;
+      const isFlights = btn.textContent.trim() === 'Flights';
+      staysGrid.style.display = isFlights ? 'none' : '';
+      flightsGrid.classList.toggle('visible', isFlights);
+    });
+  });
+
+  document.querySelectorAll('.anchor-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.anchor-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+
+  // ── Copy promo code buttons ───────────────────────────────────────────
+  document.querySelectorAll('.deal-copy-btn').forEach((btn, i) => {
+    const codes = ['EASTERSTAYS25', 'EASTEREARLY30', 'EASTERCRYPTO35'];
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(codes[i] || '').catch(() => {});
+      const orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = orig; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>
+
