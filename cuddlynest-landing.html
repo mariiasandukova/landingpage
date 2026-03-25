@@ -642,7 +642,7 @@
     .tg-title { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 32px; line-height: 45px; color: #fff; text-align: center; white-space: nowrap; }
     .tg-subtitle { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; line-height: 22px; color: #f7f7f8; text-align: center; max-width: 700px; }
     .tg-tabs { display: flex; gap: 8px; align-items: center; padding: 8px 0; }
-    .tg-tab { height: 40px; padding: 10px 16px; border-radius: 20px; font-size: 14px; line-height: 19px; cursor: pointer; }
+    .tg-tab { height: 40px; padding: 10px 16px; border-radius: 20px; font-size: 14px; line-height: 19px; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
     .tg-tab.active { background: #fff; color: var(--dark); font-family: 'Poppins', sans-serif; font-weight: 600; border: none; }
     .tg-tab.inactive { background: transparent; border: 0.5px solid #d9d6dc; color: #fff; font-family: 'Inter', sans-serif; font-weight: 400; }
     .tg-cards { display: flex; flex-wrap: nowrap; gap: 16px; align-items: flex-start; width: 100%; padding: 0 60px; overflow-x: auto; scrollbar-width: none; }
@@ -896,6 +896,10 @@
 
       /* TRAVEL GUIDE */
       .travel-guide { padding: 32px 0; }
+      .tg-subtitle { padding: 0 16px; }
+      .tg-title-row { padding: 0 16px; }
+      .tg-tabs { overflow-x: auto; flex-wrap: nowrap; padding: 8px 16px; scrollbar-width: none; width: 100%; box-sizing: border-box; }
+      .tg-tabs::-webkit-scrollbar { display: none; }
       .tg-title { font-size: 22px; line-height: 30px; white-space: normal; }
       .tg-cards {
         overflow-x: auto;
