@@ -10,7 +10,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { overflow-x: hidden; }
+    html { overflow-x: clip; scroll-behavior: smooth; }
 
     :root {
       --blue: #f189bb;
@@ -29,7 +29,7 @@
       font-family: 'Inter', sans-serif;
       background: var(--blue);
       color: var(--dark);
-      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     /* ── NAV ── */
@@ -136,6 +136,9 @@
       display: flex;
       align-items: flex-end;
       padding-left: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
     }
     .anchor-nav-tabs {
       display: flex;
@@ -148,6 +151,7 @@
       padding: 16px;
       cursor: pointer;
       white-space: nowrap;
+      text-decoration: none;
     }
     .anchor-tab span {
       font-size: 14px;
@@ -163,6 +167,11 @@
     }
 
     /* ── SECTION COMMON ── */
+    .section,
+    .deals-section,
+    .travel-guide {
+      scroll-margin-top: 51px;
+    }
     .section {
       position: relative;
       padding: 60px 60px;
@@ -427,9 +436,10 @@
 
     /* ── HOTEL CARDS GRID ── */
     .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 318px);
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
+      justify-content: center;
     }
     .hotel-card {
       border: 1px solid var(--outline);
@@ -542,6 +552,7 @@
       display: none;
       flex-wrap: wrap;
       gap: 16px;
+      justify-content: center;
     }
     .flights-grid.visible { display: flex; }
     .flight-card {
@@ -627,7 +638,7 @@
     .tg-tab { height: 40px; padding: 10px 16px; border-radius: 20px; font-size: 14px; line-height: 19px; cursor: pointer; }
     .tg-tab.active { background: #fff; color: var(--dark); font-family: 'Poppins', sans-serif; font-weight: 600; border: none; }
     .tg-tab.inactive { background: transparent; border: 0.5px solid #d9d6dc; color: #fff; font-family: 'Inter', sans-serif; font-weight: 400; }
-    .tg-cards { display: flex; gap: 16px; align-items: flex-start; width: 100%; padding: 0 24px; }
+    .tg-cards { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; justify-content: center; width: 100%; padding: 0 60px; }
     .article-card { display: flex; flex-direction: column; gap: 15px; width: 318px; flex-shrink: 0; }
     .article-card-img { width: 100%; height: 158px; object-fit: cover; border-radius: 12px; display: block; border: 0.8px solid rgba(0,0,0,0.08); }
     .article-card-meta { display: flex; align-items: center; justify-content: space-between; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #f7f7f8; }
@@ -677,7 +688,6 @@
        RESPONSIVE — TABLET (≤1024px)
     ══════════════════════════════════ */
     @media (max-width: 1024px) {
-      .cards-grid { grid-template-columns: repeat(2, 1fr); }
       .hotel-card { width: 100%; }
       .deals-cards-row { gap: 0; }
     }
@@ -717,8 +727,7 @@
       .deal-card-bottom { width: 110px; }
       .deal-copy-btn { height: 34px; font-size: 10.33px; }
 
-      /* ── HOTEL CARDS: 2 per row at 314px, 16px gap, centered ── */
-      .cards-grid { grid-template-columns: repeat(2, 314px); gap: 16px; justify-content: center; }
+      /* ── HOTEL CARDS: fixed 314px, centered via flex ── */
       .hotel-card { width: 314px; }
 
       /* ── FLIGHT CARDS: 2 per row at 314px, centered ── */
@@ -733,6 +742,7 @@
       .anchor-nav::-webkit-scrollbar { display: none; }
       .anchor-nav-tabs { gap: 0; align-items: flex-end; height: 50px; }
       .anchor-tab span { font-size: 16px; line-height: 22px; }
+      .section, .deals-section, .travel-guide { scroll-margin-top: 50px; }
 
       /* ── TRAVEL GUIDE: fill width ── */
       .travel-guide { padding: 60px 0; overflow: hidden; }
@@ -789,6 +799,7 @@
       .anchor-nav-tabs { gap: 0; align-items: flex-end; height: 50px; }
       .anchor-tab { padding: 0 16px; height: 50px; align-items: flex-end; padding-bottom: 0; gap: 0; flex-direction: column; justify-content: flex-end; }
       .anchor-tab span { font-size: 14px; padding-bottom: 16px; display: block; }
+      .section, .deals-section, .travel-guide { scroll-margin-top: 50px; }
       .anchor-tab.active { border-bottom: 2px solid #fff; }
       .anchor-tab.active span { font-weight: 600; }
       .anchor-tab:not(.active) { opacity: 0.7; border-bottom: none; }
@@ -799,7 +810,7 @@
       .deals-title-bubble { width: 351px; height: 109px; transform: scaleY(-1) rotate(180deg); }
       .deals-title-text { font-size: 24px; line-height: 34px; top: 42px; }
       .deal-card-discount { font-size: 18px; line-height: 25px; }
-      .deals-cards-row { flex-direction: column; align-items: center; gap: 24px; }
+      .deals-cards-row { flex-direction: column; align-items: center; gap: 12px; }
       .deal-card { width: 293px; height: 372px; }
 
       /* REGION SECTIONS */
@@ -834,19 +845,19 @@
       .hotel-card {
         flex-direction: row;
         width: 100%;
-        height: 100px;
-        border-radius: 12px;
+        height: 144px;
+        border-radius: 14px;
       }
       .hotel-card-img {
-        width: 110px;
-        min-width: 110px;
+        width: 100px;
+        min-width: 90px;
         height: 100%;
         border-radius: 0;
         border-right: 1px solid var(--outline);
       }
       .hotel-card-body {
         flex: 1;
-        padding: 8px 10px;
+        padding: 12px;
         gap: 4px;
         justify-content: space-between;
       }
@@ -919,14 +930,14 @@
 <section class="hero">
   <picture>
     <source media="(min-width: 769px) and (max-width: 1024px)" srcset="https://www.figma.com/api/mcp/asset/87507f28-edb6-41f0-89e9-1ef0ee517a20" />
-    <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/9ef8002b-2852-43ee-91cf-55270e1a8514" />
+    <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/cc3be546-3e20-4ecf-8fb0-f2468e99654e" />
     <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/03d9c90b-e59a-49d1-a536-735729290d11" alt="Easter Big Sale" />
   </picture>
   <nav class="nav">
     <div class="nav-inner">
       <div class="nav-logo">
         <picture>
-          <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/934fd5d4-e860-44cb-b05f-876e14fb3708" />
+          <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/694c17f8-c7ca-4a3a-ae30-5e6d01f20eb1" />
           <img src="https://www.figma.com/api/mcp/asset/89fbbe22-f279-4eac-9581-d52e9c57e4d1" alt="CuddlyNest" />
         </picture>
       </div>
@@ -942,7 +953,7 @@
         <button class="nav-signin">Sign in</button>
       </div>
       <button class="nav-hamburger" aria-label="Menu">
-        <img src="https://www.figma.com/api/mcp/asset/4def640d-37fd-4979-91d1-050592ebede2" alt="" />
+        <img src="https://www.figma.com/api/mcp/asset/7a26b850-6f70-4df4-9d97-323440683998" alt="" />
       </button>
     </div>
   </nav>
@@ -951,12 +962,12 @@
 <!-- ══ ANCHOR NAVIGATION ══ -->
 <nav class="anchor-nav">
   <div class="anchor-nav-tabs">
-    <div class="anchor-tab active"><span>Easter Egg Hunt Deals</span></div>
-    <div class="anchor-tab"><span>Europe</span></div>
-    <div class="anchor-tab"><span>North America</span></div>
-    <div class="anchor-tab"><span>Southeast Asia</span></div>
-    <div class="anchor-tab"><span>Middle East</span></div>
-    <div class="anchor-tab"><span>Easter Destinations &amp; Travel Inspiration 🐣</span></div>
+    <a class="anchor-tab active" href="#exclusive-eid-deals"><span>Easter Egg Hunt Deals</span></a>
+    <a class="anchor-tab" href="#europe"><span>Europe</span></a>
+    <a class="anchor-tab" href="#north-america"><span>North America</span></a>
+    <a class="anchor-tab" href="#southeast-asia"><span>Southeast Asia</span></a>
+    <a class="anchor-tab" href="#east"><span>Middle East</span></a>
+    <a class="anchor-tab" href="#travel-guide"><span>Easter Destinations &amp; Travel Inspiration 🐣</span></a>
   </div>
 </nav>
 
@@ -966,18 +977,15 @@
 
     <!-- Speech bubble title -->
     <div class="deals-title-wrap">
-      <picture>
-        <source media="(max-width: 768px)" srcset="https://www.figma.com/api/mcp/asset/ad13ac0c-7c0b-452d-8fdb-666c9de99619" />
-        <img class="deals-title-bubble" src="https://www.figma.com/api/mcp/asset/ad13ac0c-7c0b-452d-8fdb-666c9de99619" alt="" />
-      </picture>
-      <span class="deals-title-text">Easter Egg Hunt Deals</span>
+      <img class="deals-title-bubble" src="https://www.figma.com/api/mcp/asset/4bbf3955-56a7-424c-b58a-5db34c9d6395" alt="" />
+      <span class="deals-title-text">Egg hunt deals</span>
     </div>
 
     <div class="deals-cards-row">
 
       <!-- Card 1 – Stays (293×372) -->
       <div class="deal-card">
-        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/b48fc9a9-10b5-4e13-a9bf-af1178ce1fb1" alt="" />
+        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/5599b79b-b36a-4f2b-9907-2e69b555aee3" alt="" />
         <div class="deal-card-content">
           <div class="deal-card-info">
             <div class="deal-card-top">
@@ -994,7 +1002,7 @@
 
       <!-- Card 2 – Early Bird (293×372) -->
       <div class="deal-card">
-        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/63504412-2d46-48e8-9856-2d69b5bc799d" alt="" />
+        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/e953aad0-42b4-465a-8b91-9b355ad81f86" alt="" />
         <div class="deal-card-content">
           <div class="deal-card-info">
             <div class="deal-card-top">
@@ -1011,7 +1019,7 @@
 
       <!-- Card 3 – Crypto (293×372) -->
       <div class="deal-card">
-        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/0fa1efc7-746e-4b37-8e5f-f18c0874b1c1" alt="" />
+        <img class="deal-card-egg" src="https://www.figma.com/api/mcp/asset/2e6f71a3-b915-4fbf-b57b-d3d4adb33061" alt="" />
         <div class="deal-card-content">
           <div class="deal-card-info">
             <div class="deal-card-top deal-card-top--narrow">
@@ -1053,7 +1061,7 @@
     <!-- Europe heading -->
     <div class="europe-heading">
       <div class="europe-title-banner">
-        <img class="europe-title-img" src="https://www.figma.com/api/mcp/asset/538428f9-19d4-4c1d-8a9c-fba5503a4393" alt="Europe" />
+        <img class="europe-title-img" src="https://www.figma.com/api/mcp/asset/325c6301-67ea-46f5-beb2-209d74e4e08e" alt="Europe" />
       </div>
       <div class="tabs-row">
         <button class="tab-pill active">Rome</button>
@@ -2825,6 +2833,7 @@
     const hotels = (HOTEL_DATA[regionKey] || {})[city] || [];
     const grid = section.querySelector('.cards-grid');
     if (!grid) return;
+    const pinIcon = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.485-2.015-4.5-4.5-4.5Zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#65606C"/></svg>`;
     grid.innerHTML = hotels.map(h => `
       <a class="hotel-card" href="${h.url}" target="_blank" rel="noopener noreferrer">
         <img class="hotel-card-img" src="${h.img}" alt="${h.name}" loading="lazy" />
@@ -2832,13 +2841,13 @@
           <div class="hotel-card-heading">
             <p class="hotel-card-name">${h.name}</p>
             <div class="hotel-card-location">
+              ${pinIcon}
               <span>${city}</span>
             </div>
           </div>
           <div class="hotel-card-pricing">
-            <span class="hotel-card-pricing-label">From</span>
+            <span class="hotel-card-pricing-label">Price for 1 night:</span>
             <span class="hotel-card-price">${h.price}</span>
-            <span class="hotel-card-pricing-label">per night</span>
           </div>
         </div>
       </a>
@@ -2877,11 +2886,63 @@
     });
   });
 
+  // Click → active state
   document.querySelectorAll('.anchor-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.anchor-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
     });
+  });
+
+  // Scroll-spy → active state via IntersectionObserver
+  const sectionTabMap = {
+    'exclusive-eid-deals': 'Easter Egg Hunt Deals',
+    'europe':              'Europe',
+    'north-america':       'North America',
+    'southeast-asia':      'Southeast Asia',
+    'east':                'Middle East',
+    'travel-guide':        'Easter Destinations & Travel Inspiration 🐣'
+  };
+
+  const setActiveTab = (id) => {
+    document.querySelectorAll('.anchor-tab').forEach(t => t.classList.remove('active'));
+    const label = sectionTabMap[id];
+    document.querySelectorAll('.anchor-tab').forEach(t => {
+      if (t.querySelector('span')?.textContent.trim() === label) t.classList.add('active');
+    });
+  };
+
+  const navEl = document.querySelector('.anchor-nav');
+  const makeObserver = () => {
+    const navH = navEl ? navEl.offsetHeight : 51;
+    return new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActiveTab(entry.target.id);
+      });
+    }, {
+      rootMargin: `-${navH}px 0px -60% 0px`,
+      threshold: 0
+    });
+  };
+
+  let observer = makeObserver();
+  Object.keys(sectionTabMap).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+
+  // Rebuild observer on resize so rootMargin stays correct at all breakpoints
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      observer.disconnect();
+      observer = makeObserver();
+      Object.keys(sectionTabMap).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    }, 150);
   });
 
   // ── Copy promo code buttons ───────────────────────────────────────────
