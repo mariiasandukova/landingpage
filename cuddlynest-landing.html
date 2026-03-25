@@ -536,19 +536,20 @@
       border-top: 1px solid #e5e4e7;
       padding-top: 12px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
     }
     .hotel-card-pricing-label {
-      font-size: 12px;
-      line-height: 16px;
+      font-size: 14px;
+      line-height: 19px;
       color: #6b6267;
     }
     .hotel-card-price {
-      font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 600;
-      font-size: 16px;
-      line-height: 22px;
+      font-size: 18px;
+      line-height: 25px;
       color: var(--pink-dark);
       letter-spacing: 0.016px;
     }
@@ -852,8 +853,9 @@
       .hotel-card {
         flex-direction: row;
         width: 100%;
-        height: 144px;
+        height: 165px;
         border-radius: 14px;
+        padding-right: 12px;
       }
       .hotel-card-img {
         width: 100px;
@@ -862,18 +864,29 @@
         border-radius: 0;
         margin-bottom: 0;
         margin-right: -12px;
+        flex-shrink: 0;
       }
       .hotel-card-body {
         flex: 1;
         padding: 12px;
-        gap: 4px;
+        gap: 12px;
         justify-content: space-between;
         border-radius: 14px;
         border: 1px solid var(--outline);
+        margin-right: -12px;
       }
-      .hotel-card-name { font-size: 13px; line-height: 18px; }
-      .hotel-card-pricing { padding-top: 4px; border-top: 1px solid #e5e4e7; }
-      .hotel-card-price { font-size: 14px; }
+      .hotel-card-name {
+        font-size: 16px;
+        line-height: 22px;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .hotel-card-pricing { padding-top: 12px; border-top: 1px solid #e5e4e7; }
+      .hotel-card-pricing-label { color: var(--pink-dark); font-weight: 600; font-size: 14px; line-height: 19px; }
+      .hotel-card-price { font-size: 16px; }
 
       /* Hide decorative elements on mobile */
       .europe-decor,
